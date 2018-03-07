@@ -24,6 +24,8 @@ gulp --dev --server
 
 Все скрипты и стили собираются в `global.js` и `global.css`. Подключаемые зависимости следует хранить в `vendor` и указывать в `scopes.json` пути относительно `vendor`. 
 
+Новые скрипты помещать в `js/`, стили - в `css/site/`
+
 Иконки png складывать в `sprites/global`
 
 Новые страницы помещать в `jade` и наследовать от `jade/include/layout.pug` на примере `jade/index.pug`
