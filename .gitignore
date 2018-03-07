@@ -1,4 +1,5 @@
-/assets
+/assets/build
+/assets/images/sprites
 /css/sprites
 /node_modules
 .idea
