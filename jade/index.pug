@@ -1,0 +1,12 @@
+extends include/layout.pug
+
+block header-wrapper
+    +header('header_index')
+
+block content
+    a(href='modal.html' data-ajax) ссылка на модальное окно
+    +breadcrumbs
+    +search-form
+    +select
+    +spinner
+    +pagination

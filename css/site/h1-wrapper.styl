@@ -1,0 +1,19 @@
+.h1-wrapper
+    margin-y 30px
+    position relative
+    z-index 100
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    align-items center
+    +above(sm)
+        flex-wrap nowrap
+    h1
+        margin 0!important
+        width 100%
+        flex 1 1 auto
+        +above(sm)
+            width auto
+    &__right
+        flex 0 0 auto
+        margin-left 20px

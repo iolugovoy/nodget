@@ -1,0 +1,43 @@
+.select
+    $background = white
+    position relative
+    cursor pointer
+    height 38px
+    background-color $background
+    +above(sm)
+        height 43px
+    select
+        display block
+        height 100%
+        width 100%
+        cursor pointer
+        padding-x 10px
+        +above(sm)
+            padding-x 15px
+    &::after
+        content ''
+        display block
+        position absolute
+        background-color $background
+        right 0
+        top 0
+        bottom 0
+        width 37px
+        pointer-events none
+    &::before
+        content ''
+        display block
+        position absolute
+        border 1px solid black
+        pos 0 0 0 0
+        z-index 1
+        pointer-events none
+    &__arrow
+        arrow 1px black 22px 11px 'top'
+        transform rotate(180deg)
+        position absolute
+        right 15px
+        top 50%
+        margin-top -5px
+        z-index 2
+        pointer-events none

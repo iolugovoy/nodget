@@ -1,0 +1,15 @@
+.checkbox
+    input
+        display none
+        &:checked~.checkbox__label::before
+            //sprite $checkbox_checked
+    &__label
+        display inline-block
+        &::before
+            content ''
+            display inline-block
+            //sprite $checkbox
+            margin-right 10px
+            vertical-align middle
+            position relative
+            top -2px

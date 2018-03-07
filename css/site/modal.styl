@@ -1,0 +1,41 @@
+.modal
+    width 100%
+    max-width 600px
+    display inline-block
+    background-color white
+    overflow hidden
+    position relative
+    cursor default
+    vertical-align middle
+    white-space normal
+    text-align left
+    margin-y 50px
+    set('font-size', 14px n 16px n 18px)
+    &_wide
+        +above(sm)
+            max-width 1160px
+    &__close
+        cross 2px black 20px 20px 30px 30px
+        position absolute
+        right 0
+        top 0
+        cursor pointer
+    &__row
+        margin-y 20px
+        +above(sm)
+            margin-y 30px
+    &__container
+        padding 35px
+        max-width 600px
+    &__input-title
+        margin-bottom 5px
+        &_required
+            &::before
+                content '* '
+                display inline
+                color red
+    &__error
+        color red
+        margin-top 5px
+    &__input-error
+        border-color red!important
