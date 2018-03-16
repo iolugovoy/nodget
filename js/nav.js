@@ -22,7 +22,7 @@ function Nav(_itemClass) {
     }
 
     function _buildJQuery(el) {
-        let $item = $(`<div class="${_itemClass} ${_itemClass}_${el.id}" data-id="${el.id}" data-level="${el.level}"></div>`);
+        let $item = $(`<li class="${_itemClass} ${_itemClass}_${el.id}" data-id="${el.id}" data-level="${el.level}"></li>`);
         if (el.span) {
             $item.html(`<span class="link" onclick><span>${el.title}</span></span>`);
         } else {
@@ -85,9 +85,7 @@ function Nav(_itemClass) {
 
     this.load = function(showLoading = true) {
         if (typeof _topLevelIDList !== 'undefined') {
-            return new Promise(resolve => {
-                resolve();
-            })
+            return Promise.resolve();
         } else {
             if (showLoading) loader.show();
             return navLoader.load().then(_treeConfig => {
@@ -114,7 +112,7 @@ let navLoader = (function($) {
                     if (typeof _loaded !== 'undefined') {
                         resolve(_loaded);
                     } else {
-                        let uri = new URI ('/nav/');
+                        let uri = new URI ('/nav.php');
                         if (parseInt(window.currentPageID)) {
                             uri.setQuery('pageID', parseInt(window.currentPageID));
                         }

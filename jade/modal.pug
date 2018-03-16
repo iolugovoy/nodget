@@ -1,19 +1,20 @@
 include ../node_modules_custom/bemto.jade/bemto.pug
 +b.modal
     +e.close
-    +e.container(data-id='replace-on-submit')
-        form#Form_Form(action='modal.html', method='post', enctype='application/x-www-form-urlencoded', data-ajax='data-ajax')
+    form#Form_Form(action='modal.html', method='post', enctype='application/x-www-form-urlencoded', data-ajax='data-ajax')
+        +e.container
             +e.title Задать вопрос
             +e.row
                 +e.input-title_required Имя и фамилия:
-                input#Form_Form_Name(type='text', name='Name', aria-required='true')
+                input#Form_Form_Name(type='text', name='Name')
             +e.row
                 +e.input-title_required Email:
-                +e.INPUT.input-error#Form_Form_Email(type='email', name='Email', aria-required='true')
+                +e.INPUT.input-error#Form_Form_Email(type='email', name='Email')
                 +e.error Поле «Email» заполнено не верно.
             +e.row
-                +e.input-title_required Вопрос:
+                +e.input-title Вопрос:
                 textarea#Form_Form_Question(name='Question', aria-required='true', rows='5', cols='20')
-            +e.submit
-                button(type='submit', name='action_submit', value='Отправить' class="button") Отправить
-            +e.submit-text Нажимая на кнопку, вы даёте #[a(href='#') согласие на&nbsp;обработку] своих персональных данных.
+        +e.bottom
+            +e.warning Нажимая на кнопку, вы даёте #[a(href='#') согласие на&nbsp;обработку] своих персональных данных.
+            +e.button
+                button.button(type='submit') Отправить

@@ -14,8 +14,9 @@ function createList($level = 0): array {
         $item = [
             'id' => $id++,
             'link' => '#'.$id,
-            'active' => false,
-            'current' => false,
+            'active' => false, // предок текущей страницы || текущая страница
+            'span' => false, // текущая страница
+            'current' => false, // предок текущей страницы && не имеет вложенных пунктов в меню || текущая страница
             'title' => mb_ucfirst(app_YaDummy_cached::phrase())
         ];
         if ($parent) {
@@ -26,13 +27,14 @@ function createList($level = 0): array {
     }
     return $result;
 }
-function findCurrent($currentID, &$array) {
+function set_current(int $currentID, bool $isCurrent, &$array) {
     for ($i = 0; $i < count($array); $i++) {
-        if ($currentID === $array[$i]['id']) {
+        if ($currentID == $array[$i]['id']) {
             $array[$i]['current'] = true;
+            $array[$i]['span'] = $isCurrent;
             $array[$i]['active'] = true;
             return true;
-        } else if (isset($array[$i]['children']) && findCurrent($currentID, $array[$i]['children'])) {
+        } else if (isset($array[$i]['children']) && set_current($currentID, $isCurrent, $array[$i]['children'])) {
             $array[$i]['active'] = true;
             return true;
         }
@@ -43,7 +45,8 @@ $result = [
     [
         'id' => 1,
         'link' => '#1',
-        'active' => true,
+        'active' => false,
+        'span' => false,
         'current' => false,
         'mod' => 'production',
         'title' => 'Продукция'
@@ -51,6 +54,7 @@ $result = [
         'id' => 2,
         'link' => '#2',
         'active' => false,
+        'span' => false,
         'current' => false,
         'mod' => 'services',
         'title' => 'Услуги'
@@ -58,25 +62,28 @@ $result = [
         'id' => 3,
         'link' => '#3',
         'active' => false,
+        'span' => false,
         'current' => false,
         'title' => 'Доставки и оплата'
     ], [
         'id' => 4,
         'link' => '#4',
         'active' => false,
+        'span' => false,
         'current' => false,
         'title' => 'О компании'
     ], [
         'id' => 5,
         'link' => '#5',
         'active' => false,
+        'span' => false,
         'current' => false,
         'title' => 'Контакты'
     ]
 ];
 $result[0]['children'] = createList(1);
 $result[1]['children'] = createList(1);
-findCurrent(mt_rand(6,$id-1), $result);
+set_current(mt_rand(6,$id-1), true, $result);
 $json = json_encode($result);
 file_put_contents('nav.json', $json);
 echo $json;
