@@ -4,15 +4,15 @@ function Popover($this, $popover) {
     let opened = false;
     let effect = $popover.data('effect') || 'fadeIn';
     $popover.hide();
-    function open() {
-        _this.emit('opening', $popover);
+    function open(ev) {
+        _this.emit('opening', ev);
         $popover.addClass('no-touch');
         $popover.velocity(effect, {
             duration: 200,
             complete() {
                 opened = true;
                 $popover.removeClass('no-touch');
-                _this.emit('open', $popover);
+                _this.emit('open', ev);
             }
         });
     }
@@ -30,9 +30,9 @@ function Popover($this, $popover) {
         }
     }
     $popover.find('[data-id="close"]').click(close);
-    $this.clicktouch(() => {
+    $this.clicktouch(ev => {
         if (!opened) {
-            open();
+            open(ev);
         }
     });
     $('html').clicktouch(ev => {

@@ -1,41 +1,41 @@
-function owlCarouselFacade($_this, _options, _scales, $_prev, $_next) {
+function owlCarouselFacade($_this, _options, _scales, $_prev, $_next, _updateOnResize = true) {
     return new Promise(resolve => {
         let _enabled = false;
         if (!_scales) {
             _scales = ['xs','sm','md','lg','xl','ml'];
         }
+        function _updateArrows() {
+            let $_owlPrev = $_this.find('.owl-prev');
+            let $_owlNext = $_this.find('.owl-next');
+            if ($_prev && $_next && $_owlPrev.length && $_owlNext.length) {
+                $_prev.toggleClass('disabled', $_owlPrev.hasClass('disabled'));
+                $_next.toggleClass('disabled', $_owlNext.hasClass('disabled'));
+                if ($_prev.hasClass('disabled') && $_next.hasClass('disabled')) {
+                    $_prev.hide();
+                    $_next.hide();
+                } else {
+                    $_prev.show();
+                    $_next.show();
+                }
+            }
+        }
         function _update() {
             if (isInScales(_scales)) {
                 if (!_enabled) {
                     $_this.addClass('owl-carousel').owlCarousel($.extend({
-                        nav: false,
                         dots: false,
                         onChanged(ev) {
                             app.lazyLoad.update();
-                            if ($_prev && $_next) {
-                                if (ev.item.index === 0) {
-                                    $_prev.addClass('disabled');
-                                } else {
-                                    $_prev.removeClass('disabled');
-                                }
-                                if (ev.item.count - ev.item.index <= ev.page.size) {
-                                    $_next.addClass('disabled');
-                                } else {
-                                    $_next.removeClass('disabled');
-                                }
-                                if ($_prev.is('.disabled') && $_next.is('.disabled')) {
-                                    $_prev.hide();
-                                    $_next.hide();
-                                } else {
-                                    $_prev.show();
-                                    $_next.show();
-                                }
-                            }
+                            _updateArrows();
                         },
                         onInitialized(ev) {
+                            $_this.find('.owl-nav').hide();
+                            _updateArrows();
                             resolve($_this, ev);
                         }
-                    }, _options));
+                    }, _options, {
+                        nav: true
+                    }));
                 }
                 _enabled = true;
             } else {
@@ -62,6 +62,8 @@ function owlCarouselFacade($_this, _options, _scales, $_prev, $_next) {
             });
         }
         _update();
-        app.on('changeScale', _update);
+        if (_updateOnResize) {
+            app.on('changeScale', _update);
+        }
     });
 }

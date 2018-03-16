@@ -1,3 +1,13 @@
+function getImageSize(src) {
+    let newImg = new Image();
+    return new Promise(resolve => {
+        newImg.onload = function () {
+            resolve({width: newImg.width, height: newImg.height});
+        };
+        newImg.src = src;
+    });
+}
+
 function debounce(func, wait, immediate) {
     let timeout;
     return function() {
@@ -15,6 +25,38 @@ function debounce(func, wait, immediate) {
 
 function isInScales(scaleNames) {
     return $.inArray(app.currentScale.name, scaleNames) !== -1;
+}
+
+let CallbackRegistry = {}; // реестр
+function JSONP(url, callbackName) {
+    return new Promise((resolve, reject) => {
+        let scriptOk = false;
+        if (!callbackName) {
+            callbackName = 'cb' + String(Math.random()).slice(-6);
+        }
+        url += ~url.indexOf('?') ? '&' : '?';
+        url += 'callback=CallbackRegistry.' + callbackName;
+        CallbackRegistry[callbackName] = function(data) {
+            scriptOk = true;
+            delete CallbackRegistry[callbackName];
+            resolve(data);
+        };
+        function checkCallback() {
+            if (scriptOk) return;
+            delete CallbackRegistry[callbackName];
+            reject();
+        }
+        let script = document.createElement('script');
+        script.onreadystatechange = function() {
+            if (this.readyState === 'complete' || this.readyState === 'loaded') {
+                this.onreadystatechange = null;
+                setTimeout(checkCallback, 0);
+            }
+        };
+        script.onload = script.onerror = checkCallback;
+        script.src = url;
+        document.body.appendChild(script);
+    });
 }
 
 function isAboveScale(scaleName) {
@@ -132,11 +174,6 @@ function getContrastYIQ(hexcolor){
     return (yiq >= 128) ? 'black' : 'white';
 }
 
-/*Number.prototype.formatPrice = function(n, x) {
-    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
-    return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$& ');
-};*/
-
 (function($){
     $.fn.clicktouch = function(cb) {
         if (Modernizr.touchevents) {
@@ -145,16 +182,22 @@ function getContrastYIQ(hexcolor){
             this.on('click', cb);
         }
     };
-    
-    $.fn.columnizeCustom = function(itemClass, colClass, threshold, colNum, equalMode = true, wrapSingle = false) {
+
+    $.fn.columnizeCustom = function(itemClass, colClass, threshold, colNum, columnizedClass='columnized', wrapSingle = false) {
         this.each((i, el) => {
             let $items = $(el).find(`.${itemClass}`);
             if ($items.length > threshold) {
                 let cols = [];
+                let colSize;
+                if (colNum) {
+                    colSize = Math.ceil($items.length / colNum);
+                } else {
+                    colSize = threshold;
+                    colNum = Math.ceil($items.length / colSize);
+                }
                 for (let i = 0; i < colNum; i++) {
                     cols[i] = $([]);
                 }
-                let colSize = equalMode ? Math.ceil($items.length / colNum) : threshold;
                 $items.each((i, el) => {
                     let colI = Math.floor(i / colSize);
                     cols[colI] = cols[colI].add(el);
@@ -162,10 +205,13 @@ function getContrastYIQ(hexcolor){
                 cols.forEach(col => {
                     col.wrapAll(`<div class="${colClass}" />`);
                 });
+                $(el).addClass(columnizedClass);
             } else if (wrapSingle) {
                 $items.wrapAll(`<div class="${colClass}" />`);
+                $(el).addClass(columnizedClass);
             }
         });
+        return this;
     };
 
     $.fn.handleTableMore = function($btn) {
@@ -194,7 +240,7 @@ function getContrastYIQ(hexcolor){
     };
 
     $.fn.reduce = function(fnReduce, initialValue) {
-        var values = this,
+        let values = this,
             previousValue = initialValue;
 
         values.each(function(index, currentValue) {

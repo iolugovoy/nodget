@@ -83,14 +83,18 @@ function Nav(_itemClass) {
         return result;
     };
 
-    this.load = function() {
+    this.load = function(showLoading = true) {
         if (typeof _topLevelIDList !== 'undefined') {
             return new Promise(resolve => {
                 resolve();
             })
         } else {
+            if (showLoading) loader.show();
             return navLoader.load().then(_treeConfig => {
                 _topLevelIDList = _prepare(_treeConfig);
+                if (showLoading) loader.hide();
+            }, () => {
+                if (showLoading) loader.hide();
             });
         }
     };
@@ -101,30 +105,31 @@ function Nav(_itemClass) {
 }
 
 let navLoader = (function($) {
-    let _config;
+    let _loaded;
+    let _loading;
     return {
         load() {
-            return new Promise(resolve => {
-                if (typeof _config !== 'undefined') {
-                    resolve(_config);
-                } else {
-                    loader.show();
-                    let uri = new URI('/nav.php');
-                    if (parseInt(window.currentPageID)) {
-                        uri.setQuery('pageID', parseInt(window.currentPageID));
-                    }
-                    $.ajax(uri.toString(), {
-                        dataType: 'json',
-                        success(resp) {
-                            _config = resp;
-                            resolve(_config);
-                        },
-                        complete() {
-                            loader.hide();
+            if (typeof _loading === 'undefined') {
+                _loading = new Promise((resolve, reject) => {
+                    if (typeof _loaded !== 'undefined') {
+                        resolve(_loaded);
+                    } else {
+                        let uri = new URI ('/nav/');
+                        if (parseInt(window.currentPageID)) {
+                            uri.setQuery('pageID', parseInt(window.currentPageID));
                         }
-                    })
-                }
-            });
+                        $.ajax(uri.toString(), {
+                            dataType: 'json',
+                            success(resp) {
+                                _loaded = resp;
+                                resolve(_loaded);
+                            },
+                            error: reject
+                        })
+                    }
+                });
+            }
+            return _loading;
         }
     };
 })(jQuery);
