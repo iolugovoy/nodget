@@ -30,12 +30,12 @@ function Popover($this, $popover) {
         }
     }
     $popover.find('[data-id="close"]').click(close);
-    $this.clicktouch(ev => {
+    $this.click(ev => {
         if (!opened) {
             open(ev);
         }
     });
-    $('html').clicktouch(ev => {
+    $('html').click(ev => {
         if (opened && !$popover.filter(ev.target).length && !$popover.find(ev.target).length) {
             close();
         }

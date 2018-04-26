@@ -93,6 +93,10 @@ sprite-reimage($sprite)
     spriteImage($sprite)
     spritePosition($sprite)
 
+sprite-height($sprite, $w)
+    $scale = $w[0] / $sprite[4]
+    return $sprite[5] * $scale
+
 a-reset()
     text-decoration none
     color inherit
@@ -519,46 +523,10 @@ long-shadow(colorfondo = #000, lenght = 100, type = "box", fadeout = false, angl
     if type == "box"  { box-shadow  unquote(shadow) }
 }
 
-dotted-line($orient = 'vert')
-    if $orient == 'vert'
-        width 6px
-        background-image repeating-linear-gradient(to bottom, rgba(0,0,0,0.1) 0, rgba(0,0,0,0.1) 13px, transparent 13px, transparent 19px)
-    if $orient == 'hor'
-        height 6px
-        background-image repeating-linear-gradient(to right, rgba(0,0,0,0.1) 0, rgba(0,0,0,0.1) 13px, transparent 13px, transparent 19px)
-
 h()
     margin 0
     font-weight inherit
     font-size inherit
-
-strip-right($i, $left, $top)
-    .strip-right:nth-child({$i})
-        left $left*0.43
-        top $top*0.43
-        +above(md)
-            left $left*0.57
-            top $top*0.57
-        +above(lg)
-            left $left*0.75
-            top $top*0.75
-        +above(xl)
-            left $left
-            top $top
-
-strip-left($i, $right, $bottom)
-    .strip-left:nth-child({$i})
-        right $right*0.43
-        bottom $bottom*0.43
-        +above(md)
-            right $right*0.57
-            bottom $bottom*0.57
-        +above(lg)
-            right $right*0.75
-            bottom $bottom*0.75
-        +above(xl)
-            right $right
-            bottom $bottom
 
 margin-after()
     position relative
