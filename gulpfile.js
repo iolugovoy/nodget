@@ -24,7 +24,7 @@ const addsrc = require('gulp-add-src').prepend;
 const gulpif = require('gulp-if');
 const cmq = require('gulp-combine-mq');
 const notifier = require('node-notifier');
-const restart = require('gulp-restart');
+//const restart = require('gulp-restart');
 const onExit = require('on-exit');
 
 const watchOpts = {events: ['add', 'change']};
@@ -268,11 +268,11 @@ gulp.task('default', function () {
 
                 gutil.log('watching');
 
-                watch(['scopes.json', 'gulpfile.js'], function(file) {
+                /*watch(['scopes.json', 'gulpfile.js'], function(file) {
                     gutil.log(gutil.colors.yellow(file.path+' updated, restarting'));
                     if (SERVER) server.stop();
                     restart();
-                });
+                });*/
 
                 watch(['sprites/*/*.png'], function(file) {
                     gutil.log('sprite updated', gutil.colors.blue(file.path));
