@@ -1,9 +1,1 @@
-/assets/build
-/assets/images/sprites
-/css/sprites
-/node_modules
-.idea
-/*.html
-nav.json
-/access.log
-/error.log
+node_modules
