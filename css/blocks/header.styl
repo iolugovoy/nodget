@@ -1,0 +1,83 @@
+.header
+	display none
+	set('padding-x', 0 15px 16px 0 0 0)
+	set('padding-y', 0 15px 20px 0 0 0)
+	+between(sm, md)
+		flex-direction column 
+		display flex
+		position absolute
+		top 0
+		left 0
+		right 0		
+		background-color #F3F3F3
+		z-index 100
+	&__top
+		display flex 
+		align-items center
+		justify-content space-between
+		margin-bottom 20px
+	&__bottom
+		display flex 
+		align-items center	
+		justify-content space-between
+	&__menu
+		position relative
+		ul
+			display flex
+			margin 0
+			li 
+				margin 0
+				overflow hidden
+				a
+					font-family 'Gotham Pro', sans-serif
+					padding 8px 20px
+					position relative
+					color #161717
+					transition all .2s ease-in-out
+					display inline-block
+					set('font-size', 12px n 14px)
+					&:before
+						content ''
+						full-fill()
+						z-index 0
+						background $baseGradient
+						transition $baseTransition
+						transform translateY(-100%)
+					&:hover, &.active , &:focus
+						color white
+						&:before
+							transform translateY(0)
+					span
+						position relative
+						z-index 0
+	&__form 
+		display flex
+	&__controls
+		display flex
+	&__curency
+		margin-right 10px
+	&__logo
+		img
+			width 125px
+	&__links
+		margin-left 20px
+		margin-right auto
+		display flex
+	&__link
+		display flex
+		align-items center
+		&:not(:last-child)
+			margin-right 20px
+		svg 
+			margin-right 10px
+	.search-form
+		border-bottom 1px solid #161717
+		input
+			border none
+			padding-left 0
+			color #161717
+		svg 
+			fill #161717
+	#curency-select, #language-select 
+		height 38px
+				

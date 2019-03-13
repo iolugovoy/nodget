@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+    <meta charset="utf-8">
+<title>Аренда жилья на острове Пхукет — PhuketRentMix </title>
+<meta name="description" content="Главная страница сайта PhuketRentMix">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="/assets/build/global.css">
+
+    <!--link rel="preload" href="/assets/build/index.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+    <noscript><link rel="stylesheet" href="/assets/build/index.css"></noscript-->
+</head>
+<body>
+    <div class="body">
+        <div class="sidebar">
+    <div class="sidebar__inner">
+        <button id="toggleSidebar" type="button">
+            <svg class="icon icon-arrow">
+                <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+            </svg>
+        </button>
+        <div class="sidebar__logo">
+            <img src="/assets/images/logo.svg" alt="PhuketRentMix">
+        </div>
+        <div class="sidebar__form">
+            <form action="" class="search-form">
+                <input type="text" placeholder="НАЙТИ">
+                <button>
+                    <svg class="icon icon-lens">
+                        <use xlink:href="/assets/build/sprites/global.svg#icon-lens"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <nav class="sidebar__menu">
+            <ul>
+                <li><a href="#">Аренда</a></li>
+                <li><a href="#">Продажа</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar__links">
+            <a href="/modal.html" class="sidebar__link ajax-link" data-ajax>
+                <svg class="icon icon-question">
+                    <use xlink:href="/assets/build/sprites/global.svg#icon-question" />
+                </svg>
+                <span>Задать вопрос</span>
+            </a>
+            <a href="" class="sidebar__link ajax-link" data-ajax >
+                <svg class="icon icon-cab">
+                    <use xlink:href="/assets/build/sprites/global.svg#icon-cab" />
+                </svg>
+                <span>Личный кабинет</span>
+            </a>
+        </div>
+        <div class="sidebar__controls">
+            <div class="sidebar__curency">
+                <form action="" class="curency-form">
+                    <select name="curency" id="curency-select">
+                        <option value="rub">₽</option>
+                        <option value="usd">$</option>
+                        <option value="eur">€</option>
+                        <option value="bat">฿</option>
+                    </select>
+                </form>
+            </div>
+            <div class="sidebar__language">
+                <form action="" class="language-form">
+                    <select name="language" id="language-select">
+                        <option value="ru">RU</option>
+                        <option value="eng">ENG</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+        <header class="header">
+	
+	<div class="header__top">
+		
+		<div class="header__logo">
+			<img src="/assets/images/logo.svg" alt="PhuketRentMix">
+		</div>
+
+		<div class="header__links">
+	        <a href="#" class="header__link ajax-link">
+	            <svg class="icon icon-question">
+	                <use xlink:href="/assets/build/sprites/global.svg#icon-question" />
+	            </svg>
+	            <span>Задать вопрос</span>
+	        </a>
+	        <a href="" class="header__link ajax-link">
+	            <svg class="icon icon-cab">
+	                <use xlink:href="/assets/build/sprites/global.svg#icon-cab" />
+	                <span>Личный кабинет</span>
+	            </svg>
+	        </a>
+	    </div>
+		<div class="header__controls">
+	        
+	        <div class="header__curency">
+	            <form action="" class="curency-form">
+	                <select name="curency" id="curency-select">
+	                    <option value="rub">₽</option>
+	                    <option value="usd">$</option>
+	                    <option value="eur">€</option>
+	                    <option value="bat">฿</option>
+	                </select>
+	            </form>
+	        </div>
+
+	        <div class="header__language">
+	            <form action="" class="language-form">
+	                <select name="language" id="language-select">
+	                    <option value="ru">RU</option>
+	                    <option value="eng">ENG</option>
+	                </select>
+	            </form>
+	        </div>
+	        
+	    </div>
+
+
+	</div>
+	<div class="header__bottom">
+		
+	    <nav class="header__menu">
+	        <ul>
+	            <li><a href="#"><span>Аренда</span></a></li>
+	            <li><a href="#"><span>Продажа</span></a></li>
+	            <li><a href="#"><span>Отзывы</span></a></li>
+	            <li><a href="#"><span>Блог</span></a></li>
+	            <li><a href="#"><span>Контакты</span></a></li>
+	        </ul>
+	    </nav>
+		
+		<div class="header__search">
+			<form action="" class="header__form search-form">
+		        <input type="text" placeholder="НАЙТИ">
+		        <button>
+		            <svg class="icon icon-lens">
+		                <use xlink:href="/assets/build/sprites/global.svg#icon-lens"/>
+		            </svg>
+		        </button>
+    		</form>
+		</div>
+
+	</div>
+	
+</header>
+        <div class="main">
+            <section class="review">
+                <div class="review__slider">
+                    <ul class="review__sli-list">
+                        <li class="review__slide">
+                            <div style="background-image: url('/assets/images/rent/1.png')"></div>
+                        </li>
+                        <li class="review__slide">
+                            <div style="background-image: url('/assets/images/rent/2.jpg')"></div>
+                        </li>
+                        <li class="review__slide">
+                            <div style="background-image: url('/assets/images/rent/3.jpg')"></div>
+                        </li>
+                        <li class="review__slide">
+                            <div style="background-image: url('/assets/images/rent/4.jpg')"></div>
+                        </li>
+                        <li class="review__slide">
+                            <div style="background-image: url('/assets/images/rent/1.png')"></div>
+                        </li>
+                        <li class="review__slide">
+                            <div style="background-image: url('/assets/images/rent/4.jpg')"></div>
+                        </li>
+                        <li class="review__slide">
+                            <div style="background-image: url('/assets/images/rent/3.jpg')"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="review__pagination">
+                    <ul class="review__pag-list">
+                        <li class="review__thumb">
+                            <div style="background-image: url('/assets/images/rent/thumb/1.png')"></div>
+                        </li>
+                        <li class="review__thumb">
+                            <div style="background-image: url('/assets/images/rent/thumb/2.png')"></div>
+                        </li>
+                        <li class="review__thumb">
+                            <div style="background-image: url('/assets/images/rent/thumb/3.png')"></div>
+                        </li>
+                        <li class="review__thumb">
+                            <div style="background-image: url('/assets/images/rent/thumb/4.png')"></div>
+                        </li>
+                        <li class="review__thumb">
+                            <div style="background-image: url('/assets/images/rent/thumb/1.png')"></div>
+                        </li>
+                        <li class="review__thumb">
+                            <div style="background-image: url('/assets/images/rent/thumb/4.png')"></div>
+                        </li>
+                        <li class="review__thumb">
+                            <div style="background-image: url('/assets/images/rent/thumb/3.png')"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="review__arrows owl-arrows">
+                    	<div class="owl-arrows__prev">
+		<svg class="icon icon-arrow">
+            <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+        </svg>
+	</div>
+    <div class="owl-arrows__divider"></div>
+    <div class="owl-arrows__next">
+    	<svg class="icon icon-arrow">
+	        <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+	    </svg>
+    </div>
+                </div>
+                <div class="review__video">
+                    <button class="review__video-btn blue-btn">
+                        <span>Видео</span>
+                        <svg class="icon icon-arrow">
+                            <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+            <section class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumb"><a href="/">Аренда</a></li>
+                    <li class="breadcrumb"><a href="/">Бунгало</a></li>
+                </ul>
+            </section>
+            <section class="description">
+                <div class="description__info">
+                    <h1>Красивый комплекс бунгало рядом с пляжами Ката и Карон</h1>
+                    <div class="description__id">ID774</div>
+                    <div class="description__adress">
+                        <svg class="icon icon-map-marker">
+                            <use xlink:href="/assets/build/sprites/global.svg#icon-map-marker"/>
+                        </svg>
+                        <span>Банг Тао, 73/3 Moo 3, Soi Awo Bangtao 2, Awo Bangtao Rd., Cherngthalay, Thalang District, Phuket 83110, Thailand</span>
+
+                    </div>
+                    <div class="descriprion__text">
+                        <p>
+                            Отель Bangtao beach chalet это изумительной красоты сад среди которого расположено несколько уютных бунгало. Во внутреннем саду также находиться общий бассейн с шезлонгами и зонтами. Вокруг царит тишина и атмосфера уединения. За пределами отельного комплекса к вашим услугам все разнообразие различных заведений: сувенирные лавки, магазины, кафе, рестораны, спа- и массажные салоны, ну и безусловно великолепный, белоснежный пляж Бангтао.
+                        </p>
+                        <div class="expand-btn">Подробнее</div>
+                    </div>
+
+                </div>
+
+                <form class="rent-form description__form">
+                    <div class="rent-form__price">
+                        <div class="rent-form__price-wrapper">
+                            <div class="rent-form__price-el" data-time-unit="day"> 5 220 Р</div>
+                            <div class="rent-form__price-el" data-time-unit="month"> 155 220 Р</div>
+                            <div class="rent-form__price-el" data-time-unit="halfyear">20 900 330 Р</div>
+                        </div>
+                        <select name="timeunit" id="timeunit">
+                            <option value="day">
+                                за день
+                            </option>
+                            <option value="month">
+                                за месяц
+                            </option>
+                            <option value="halfyear">
+                                за пол года
+                            </option>
+                        </select>   
+                    </div>
+                    <label class="rent-form__dates">
+                        Даты отпуска
+                        <input type="text">
+                    </label>
+                    <label class="rent-form__guests">
+                        Колличество гостей
+                        <input type="number" min="1" value="1">
+                    </label>
+                    <div class="rent-form__deposite">
+                        <span>Страховой депозит</span>
+                        <strong>30%(150 000 Р)</strong>
+                    </div>
+                    <div class="rent-form__sum">
+                        <span>Итого</span>
+                        <div class="rent-form__sum-value">
+                            507 220 Р
+                        </div>
+                    </div>
+                    <div class="rent-form__deposite-sm">
+                        <span>Депозит за бронирование</span>
+                        <strong>30%(150 000 Р)</strong>
+                    </div>
+                    <button type="submit" class="blue-btn">
+                        <span> Забронировать</span>
+                        <svg class="icon icon-arrow">
+                            <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                        </svg>                 
+                    </button>
+                </form>
+            </section>
+            <section class="arrival">
+                <div class="arrival__from">
+                    <div class="arrival__heading">
+                        После
+                        <svg class="icon icon-arrow">
+                            <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                        </svg>
+                    </div>
+                    <div class="arrival__time">
+                        16:00
+                    </div>
+                    <div class="arrival__name">
+                        Прибытие
+                    </div>
+                </div>
+                <div class="arrival__to">
+                    <div class="arrival__heading">
+                        До
+                        <svg class="icon icon-arrow">
+                            <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                        </svg>
+                    </div>
+                    <div class="arrival__time">
+                        11:00
+                    </div>
+                    <div class="arrival__name">
+                        Выезд
+                    </div>
+                </div>
+            </section>
+            <section class="features">
+                <h2 class="features__title">
+                    Характеристики
+                </h2>
+                <div class="features__body">
+                    <ul class="features__list">
+                        <li class="feature">
+                            <div class="feature__name">Этаж</div>
+                            <div class="feature__value">2/5</div>
+                        </li>
+                        <li class="feature">
+                            <div class="feature__name">Площадь</div>
+                            <div class="feature__value">2/5</div>
+                        </li>
+                        <li class="feature">
+                            <div class="feature__name">Гостей</div>
+                            <div class="feature__value">2</div>
+                        </li>
+                        <li class="feature">
+                            <div class="feature__name">Доп.гостевые места</div>
+                            <div class="feature__value">2</div>
+                        </li>
+                        <li class="feature">
+                            <div class="feature__name">Гостинная</div>
+                            <div class="feature__value">2</div>
+                        </li>
+                        <li class="feature">
+                            <div class="feature__name">Кровать</div>
+                            <div class="feature__value">2</div>
+                        </li>
+                        <li class="feature">
+                            <div class="feature__name">Ванная</div>
+                            <div class="feature__value">2</div>
+                        </li>
+                        <li class="feature">
+                            <div class="feature__name">Частный бассейн</div>
+                            <div class="feature__value">Нет</div>
+                        </li>
+                        <li class="feature">
+                            <div class="feature__name">Кухня</div>
+                            <div class="feature__value">2</div>
+                        </li>
+                        <li class="feature">
+                            <div class="feature__name">Гостинная </div>
+                            <div class="feature__value">2</div>
+                        </li>
+                        <li class="feature">
+                            <div class="feature__name">Общий бассейн</div>
+                            <div class="feature__value">Да</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="comfort">
+                <h2 class="comfort__title">
+                    Удобства
+                </h2>
+                <div class="comfort__body">
+                    <ul class="comfort__list">
+                        <li class="item">
+                            <div class="item__name">Ванные полотенца</div>
+                            <div class="item__value">Да</div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name">Пляжные полотенца</div>
+                            <div class="item__value">Да</div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name">Туалетные принадлежности (мыло, шампунь, гель для душа)</div>
+                            <div class="item__value">Да</div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name">Wi-Fi</div>
+                            <div class="item__value">Да</div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name">Шкаф/комод</div>
+                            <div class="item__value">2</div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name">Телевизор</div>
+                            <div class="item__value">Нет</div>
+                        </li>
+                    </ul>
+                    <button type="button" class="comfort__more-btn blue-btn">
+                        <span>Подробнее</span>
+                        <svg class="icon icon-arrow">
+                            <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+            <section class="sleep-place">
+                <h2 class="sleep-place__title">
+                    Спальные места
+                </h2>
+                <ul class="sleep-place__list">
+                    <li class="place">
+                        <div class="place__icon">
+                            <svg></svg>
+                        </div>
+                        <div class="place__heading">Спальня 1</div>
+                        <div class="place__text">1 двуспальная кровать</div>
+                    </li>
+                    <li class="place">
+                        <div class="place__icon">
+                            <svg></svg>
+                        </div>
+                        <div class="place__heading">Спальня 2</div>
+                        <div class="place__text">1 односпальная кровать</div>
+                    </li>
+                    <li class="place">
+                        <div class="place__icon">
+                            <svg></svg>
+                        </div>
+                        <div class="place__heading">Общие зоны</div>
+                        <div class="place__text">1 диван</div>
+                    </li>
+                </ul>
+            </section>
+            <section class="map">
+                <div class="map__description">
+                    <div class="map__top">
+                        Район
+                    </div>
+                    <svg class="icon-down"></svg>
+                    <div class="map__title">
+                        Кату
+                    </div>
+                    <div class="map__article">Центральный район</div>
+                    <div class="map__data">
+                        <div class="data__heading">
+                            Пляжи рядом:
+                        </div>
+                        <div class="data__body">
+                            Най Харн, Януй
+                        </div>
+                    </div>
+                    <div class="map__data">
+                        <div class="data__heading">
+                            Расстояние до пляжа:
+                        </div>
+                        <div class="data__body">
+                            На транспорте
+                        </div>
+                    </div>
+                    <div class="map__hotel">
+                        <div class="hotel__heading">
+                            Отель:
+                        </div>
+                        <div class="hotel__body">
+                            Saturdays Residence
+                        </div>
+                        <div class="hotel__stars">
+                            <div class="star visible">★</div>
+                            <div class="star visible">★</div>
+                            <div class="star visible">★</div>
+                            <div class="star">★</div>
+                            <div class="star">★</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map__body"></div>
+            </section>
+            <section class="offers">
+    <h1 class="offers__title">Похожие</h1>
+    <div class="offers-slider__arrows">
+        <div class="offers-slider__arrow-left"></div>
+        <div class="offers-slider__arrows-divider"></div>
+        <div class="offers-slider__arrow-right"></div>
+    </div>
+    <div class="offers-slider">
+        <div class="offers-slider__list">
+            <div class="offers-slider__block ">
+                <a href="/" class="offer-item offer-item--big">
+                    <div class="offer-item__image" style="background-image: url('/assets/images/item-1.png')">
+
+                    </div>
+                    <div class="offer-item__text">
+                        
+                        <div class="offer-item__title">
+                            <span>Аппартаменты с видом на море</span>
+                            <svg class="icon icon-arrow">
+                                <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                            </svg>
+                        </div>
+                        <div class="offer-item__price">12 600 <span class="rubl">Р</span>/сутки</div>
+                    </div>
+                </a>
+                <a href="/" class="offer-item">
+                    <div class="offer-item__image" style="background-image: url('/assets/images/item-2.png')">
+                    </div>
+                    <div class="offer-item__text">
+                        
+                        <div class="offer-item__title">
+                            <span>Аппартаменты с видом на море&nbsp;</span>
+                            <svg class="icon icon-arrow">
+                                <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                            </svg>
+                        </div>
+                        <div class="offer-item__price">12 600 <span class="rubl">Р</span>/сутки</div>
+                    </div>
+                </a>
+                <a href="/" class="offer-item">
+                    <div class="offer-item__image" style="background-image: url('/assets/images/item-3.png')">
+                    </div>
+                    <div class="offer-item__text">
+                        <div class="offer-item__title">
+                            <span>Аппартаменты с видом на море</span>
+                            <svg class="icon icon-arrow">
+                                <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                            </svg>
+                        </div>
+                        <div class="offer-item__price">12 600 <span class="rubl">Р</span>/сутки</div>                 
+                    </div>
+                </a>
+            </div>
+            <div class="offers-slider__block">
+                <a href="/" class="offer-item ">
+                    <div class="offer-item__image" style="background-image: url('/assets/images/item-1.png')">
+                    </div>
+                    <div class="offer-item__text">
+                        <div class="offer-item__title">
+                            <span>Аппартаменты с видом на море&nbsp;</span>
+                            <svg class="icon icon-arrow">
+                                <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                            </svg>
+                        </div>
+                        <div class="offer-item__price">12 600 <span class="rubl">Р</span>/сутки</div>
+                        
+                    </div>
+                </a>
+                <a href="/" class="offer-item">
+                    <div class="offer-item__image" style="background-image: url('/assets/images/item-2.png')">
+                    </div>
+                    <div class="offer-item__text">
+                        <div class="offer-item__title">
+                            <span>Аппартаменты с видом на море</span>
+                            <svg class="icon icon-arrow">
+                                <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                            </svg>
+                        </div>
+                        <div class="offer-item__price">12 600 <span class="rubl">Р</span>/сутки</div>
+                    </div>
+                </a>
+                <a href="/" class="offer-item offer-item--big">
+                    <div class="offer-item__image" style="background-image: url('/assets/images/item-3.png')">
+                    </div>
+                    <div class="offer-item__text">
+                        <div class="offer-item__title">
+                            <span>Аппартаменты с видом на море</span>
+                             <svg class="icon icon-arrow">
+                                <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+                            </svg>
+                        </div>
+                        <div class="offer-item__price">12 600 <span class="rubl">Р</span>/сутки</div> 
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="offers-slider__arrows owl-arrows">
+            	<div class="owl-arrows__prev">
+		<svg class="icon icon-arrow">
+            <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+        </svg>
+	</div>
+    <div class="owl-arrows__divider"></div>
+    <div class="owl-arrows__next">
+    	<svg class="icon icon-arrow">
+	        <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
+	    </svg>
+    </div>
+        </div>
+    </div>
+</section>
+            <div class="footer">
+    <div class="footer__line"></div>
+    <div class="footer__wrapper">
+        <div class="footer__social">
+            <span>Рассказать друзям</span>
+            <ul>
+                <li>
+                    <a href="/" target="_blank" rel="nofollow noopener" title="Вконтакте">
+                        <div class="icon-wrapper">
+                            <svg class="icon icon-vk">
+                                <use xlink:href="/assets/build/sprites/global.svg#icon-vk"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" target="_blank" rel="nofollow noopener" title="Одноклассники">
+                        <div class="icon-wrapper">
+                            <svg class="icon icon-odnoklassniki">
+                                <use xlink:href="/assets/build/sprites/global.svg#icon-odnoklassniki"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" target="_blank" rel="nofollow noopener" title="Фейсбук">
+                        <div class="icon-wrapper">
+                            <svg class="icon icon-facebook">
+                                <use xlink:href="/assets/build/sprites/global.svg#icon-facebook"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" target="_blank" rel="nofollow noopener" title="Твиттер">
+                        <div class="icon-wrapper">
+                            <svg class="icon icon-twitter">
+                                <use xlink:href="/assets/build/sprites/global.svg#icon-twitter"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__policy">
+            <a href="/policy">Политика <br> конфиденциальности</a>
+        </div>
+        <div class="footer__creator">
+            <span>Созадние сайта </span>
+            <a href="http://www.unicontent-studio.ru" target="_blank">
+                UNICONTENT
+            </a>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    <div class="mobile-menu">
+    <ul class="mobile-menu__list"></ul>
+    <div class="mobile-menu__close"></div>
+</div>
+
+
+
+<div class="mobile-toolbar" id="mobile-toolbar">
+    <div class="mobile-toolbar__burger">
+    <button>
+        <div class="burger-btn">
+            <div class="burger-btn-bar"></div>
+            <div class="burger-btn-bar"></div>
+            <div class="burger-btn-bar"></div>
+        </div>
+    </button>
+</div>
+<div class="mobile-toolbar__search">
+    <button>
+        <svg class="icon icon-lens">
+            <use xlink:href="/assets/build/sprites/global.svg#icon-lens"/>
+        </svg>
+    </button>
+</div>
+<div class="mobile-toolbar__question">
+    <a href="#" class="sidebar__link ajax-link">
+        <svg class="icon icon-question">
+            <use xlink:href="/assets/build/sprites/global.svg#icon-question" />
+        </svg>
+    </a>
+</div>
+<div class="mobile-toolbar__cab">
+    <a href="" class="sidebar__link ajax-link">
+        <svg class="icon icon-cab">
+            <use xlink:href="/assets/build/sprites/global.svg#icon-cab" />
+        </svg>
+    </a>
+</div>
+<div class="mobile-toolbar__currency">
+        ₽
+</div>
+<div class="mobile-toolbar__language">
+    ru
+</div>
+
+</div>
+
+<div class="global-overlay"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/vendor/jquery.3.2.1.min.js"><\/script>')</script>
+<!--script>
+    var WebFontConfig = {
+		fontactive: function('Gotham Pro', 'n4') {
+			console.log('Готэм про загружен');
+		},
+    };
+</script-->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>window.WebFont || document.write('<script src="assets/vendor/webfont.js"><\/script>')</script>
+<!--script>
+	WebFont.load({
+		google: {families: [
+                'Open+Sans:300,300i,400,400i,700,700i:cyrillic',
+            ]},
+        custom: {
+			families: ['Gotham Pro:n4,n7', 'Roboto:n4,n7']
+		},
+	})
+</script-->
+
+
+
+<div style="opacity: 0; transform:translateY(-99999999px)">
+	 <svg xmlns="http://www.w3.org/2000/svg" >
+		<defs>
+			<linearGradient id="baseGradient" x1="18.4167" y1="66.5833" x2="48.1666" y2="66.5833" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#0094FF"/>
+			<stop offset="1" stop-color="#312783"/>
+			</linearGradient>
+						<linearGradient id="smallGradient" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#0094FF"/>
+			<stop offset="1" stop-color="#312783"/>
+			</linearGradient>
+		</defs>
+	</svg>
+</div>
+    <script src="/assets/build/global.js"></script>
+</body>
+</html>
