@@ -1,37 +1,112 @@
 @font-face {
-  font-family: 'PT Rouble Sans';
-  src: url("../fonts/PTRoubleSans.woff2") format('woff2'), url("../fonts/PTRoubleSans.woff") format('woff');
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeue.ttf") format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url("../fonts/GothamPro.eot");
-  src: url("../fonts/GothamPro.eot?#iefix") format('embedded-opentype'), url("../fonts/GothamPro.woff") format('woff'), url("../fonts/GothamPro.ttf") format('truetype');
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeueBold.ttf") format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeueBoldItalic.ttf") format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeueCondensedBlack.ttf") format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeueCondensedBold.ttf") format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeueItalic.ttf") format('ttf');
   font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeueLight.ttf") format('ttf');
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url("../fonts/GothamPro-Black.eot");
-  src: url("../fonts/GothamPro-Black.eot?#iefix") format('embedded-opentype'), url("../fonts/GothamPro-Black.woff") format('woff'), url("../fonts/GothamPro-Black.ttf") format('truetype');
-  font-weight: bold;
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeueLightItalic.ttf") format('ttf');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeueMedium.ttf") format('ttf');
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url("../fonts/Roboto-Regular.ttf") format('truetype');
-  font-weight: normal;
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeueUltraLight.ttf") format('ttf');
+  font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url("../fonts/Roboto-Bold.ttf") format('truetype');
-  font-weight: bold;
+  font-family: HelveticaNeue;
+  src: url("../assets/fonts/helvetica_neue/HelveticaNeueUltraLightItalic.ttf") format('ttf');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Muller;
+  src: url("../assets/fonts/muller/Fontfabric - MullerBold.otf") format('otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Muller;
+  src: url("../assets/fonts/muller/Fontfabric - MullerLight.otf") format('otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Muller;
+  src: url("../assets/fonts/muller/Fontfabric - MullerMedium.otf") format('otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Muller;
+  src: url("../assets/fonts/muller/Fontfabric - MullerRegular.otf") format('otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Muller;
+  src: url("../assets/fonts/muller/Fontfabric - MullerThin.otf") format('otf');
+  font-weight: 200;
   font-style: normal;
 }
 
@@ -2848,9 +2923,11 @@ body {
   margin: 0px;
   font-size: 14px;
   line-height: 1.35em;
-  color: #000;
+  color: #fff;
   min-width: 320px;
   position: relative;
+  background-color: #0f0d0e;
+  font-family: Muller, sans-serif;
 }
 
 .global-overlay {
@@ -2872,7 +2949,7 @@ ol,
 table {
   margin: 0px;
   padding: 0;
-  color: #000;
+  color: #fff;
   font-weight: 300;
 }
 
@@ -2883,12 +2960,12 @@ li {
 a {
   text-decoration: none;
   display: inline;
-  color: #000;
+  color: #6a6a6a;
 }
 
 a:hover,
 a:focus {
-  color: #333;
+  color: #888;
   text-decoration: none;
 }
 
@@ -2907,7 +2984,7 @@ a:focus {
 
 .a:hover,
 .a:focus {
-  color: #333;
+  color: #fff;
 }
 
 h1,
@@ -2917,7 +2994,7 @@ h4,
 h5,
 h6,
 .title {
-  color: #000;
+  color: #fff;
   line-height: 1em;
   margin-top: 0;
   margin-bottom: 0.8em;
@@ -3006,45 +3083,6 @@ button {
   font-weight: bold;
 }
 
-h1,
-h2,
-h3 {
-  font-weight: bold;
-  font-family: 'Gotham Pro';
-}
-
-h1 {
-  font-size: 80px;
-}
-
-h2 {
-  font-size: 45px;
-}
-
-h3 {
-  font-size: 22px;
-}
-
-h4 {
-  font-family: 'Roboto';
-  font-weight: bold;
-  font-size: 24px;
-}
-
-html {
-  font-zie: 14px;
-  font-family: 'Roboto';
-}
-
-a {
-  color: #5d5d5d;
-}
-
-ul {
-  margin-left: 0;
-  list-style-type: none;
-}
-
 .breadcrumbs {
   font-size: 14px;
   color: #8c8c8c;
@@ -3105,6 +3143,47 @@ ul {
   height: 30px;
   width: 1px;
   background-color: currentColor;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 50px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.31)), color-stop(89%, rgba(0,0,0,0.13)), to(rgba(0,0,0,0)));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.31) 0%, rgba(0,0,0,0.13) 89%, rgba(0,0,0,0) 100%);
+}
+
+.header__logo img {
+  height: 65px;
+}
+
+.header__menu-list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__menu-item {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.top {
+  min-height: 800px;
+  height: 100vh;
+  background-image: url("/assets/images/first.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 
 @media only screen and (min-width: 640px) {
