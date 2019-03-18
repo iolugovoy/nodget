@@ -1,111 +1,111 @@
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeue.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeue.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeueBold.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeueBold.ttf") format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeueBoldItalic.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeueBoldItalic.ttf") format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeueCondensedBlack.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeueCondensedBlack.ttf") format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeueCondensedBold.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeueCondensedBold.ttf") format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeueItalic.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeueItalic.ttf") format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeueLight.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeueLight.ttf") format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeueLightItalic.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeueLightItalic.ttf") format('truetype');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeueMedium.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeueMedium.ttf") format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeueUltraLight.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeueUltraLight.ttf") format('truetype');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  src: url("../assets/fonts/helvetica_neue/HelveticaNeueUltraLightItalic.ttf") format('ttf');
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helvetica_neue/HelveticaNeueUltraLightItalic.ttf") format('truetype');
   font-weight: 200;
   font-style: italic;
 }
 
 @font-face {
-  font-family: Muller;
-  src: url("../assets/fonts/muller/Fontfabric - MullerBold.otf") format('otf');
+  font-family: 'Muller';
+  src: url("../fonts/muller/Fontfabric - MullerBold.otf") format('opentype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Muller;
-  src: url("../assets/fonts/muller/Fontfabric - MullerLight.otf") format('otf');
+  font-family: 'Muller';
+  src: url("../fonts/muller/Fontfabric - MullerLight.otf") format('opentype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Muller;
-  src: url("../assets/fonts/muller/Fontfabric - MullerMedium.otf") format('otf');
+  font-family: 'Muller';
+  src: url("../fonts/muller/Fontfabric - MullerMedium.otf") format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Muller;
-  src: url("../assets/fonts/muller/Fontfabric - MullerRegular.otf") format('otf');
+  font-family: 'Muller';
+  src: url("../fonts/muller/Fontfabric - MullerRegular.otf") format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Muller;
-  src: url("../assets/fonts/muller/Fontfabric - MullerThin.otf") format('otf');
+  font-family: 'Muller';
+  src: url("../fonts/muller/Fontfabric - MullerThin.otf") format('opentype');
   font-weight: 200;
   font-style: normal;
 }

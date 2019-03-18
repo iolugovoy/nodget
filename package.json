@@ -1,5 +1,5 @@
 {
-  "name": "phuket-rent-mix_frontend",
+  "name": "nodget",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -19,7 +19,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^6.1.2",
-    "gulp-babel-minify": "^0.4.3",
+    "gulp-babel-minify": "^0.5.0",
     "gulp-cheerio": "^0.6.3",
     "gulp-clean-css": "^3.10.0",
     "gulp-combine-media-queries": "^0.2.0",
@@ -28,8 +28,8 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.1",
     "gulp-js-import": "^1.0.6",
-    "gulp-jshint": "^2.0.4",
-    "gulp-live-server": "0.0.30",
+    "gulp-jshint": "^2.1.0",
+    "gulp-live-server": "0.0.31",
     "gulp-livereload": "^3.8.1",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
@@ -44,6 +44,7 @@
     "imagemin-optipng": "^5.2.1",
     "imagemin-pngquant": "^6.0.0",
     "minimatch": "^3.0.4",
+    "natives": "^1.1.6",
     "node-notifier": "^5.1.2"
   },
   "devDependencies": {
