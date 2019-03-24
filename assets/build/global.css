@@ -3366,6 +3366,7 @@ button {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 10;
 }
 
 .top .social__list {
@@ -3391,6 +3392,10 @@ button {
 
 .top .social__link svg path {
   fill: #fff !important;
+}
+
+.top .slider {
+  width: 100%;
 }
 
 .top .slider .slide {
