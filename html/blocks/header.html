@@ -1,37 +1,54 @@
 <header class="header">
-	<div class="header__logo">
-		<img src="/assets/images/logo-white.svg" alt="Nodget computers">
-	</div>
-	<div class="header__menu">
-		<ul class="header__menu-list">
-			<li class="header__menu-item">
-				<a class="header__menu-link" href="">Продукты</a>
-			</li>
-			<li class="header__menu-item">
-				<a href="" class="header__menu-link">Аксессуары</a>
-			</li>
-			<li class="header__menu-item">
-				<a href="" class="header__menu-link">О нас</a>
-			</li>
-			<li class="header__menu-item">
-				<a href="" class="header__menu-link">Контакты</a>
-			</li>
-			<li class="header__menu-item">
-				<a href="" class="header__menu-link">Новости</a>
-			</li>
-		</ul>
+	<div class="header__left">
+		<a href="/" class="header__logo">
+			<img src="/assets/images/logo-white.svg" alt="Nodget computers">
+		</a>
+		<div class="header__menu">
+			<ul class="header__menu-list">
+				<li class="header__menu-item">
+					<a class="header__menu-link" href="">Продукты</a>
+					<ul class="header__submenu-list">
+						<li class="header__submenu-item">
+							<a href="" class="header__menu-link">mini tower</a>
+						</li>
+						<li class="header__submenu-item">
+							<a href="" class="header__menu-link">mid tower</a>
+						</li>
+						<li class="header__submenu-item">
+							<a href="" class="header__menu-link">big tower</a>
+						</li>
+					</ul>
+				</li>
+				<li class="header__menu-item">
+					<a href="" class="header__menu-link">Аксессуары</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="" class="header__menu-link">О нас</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="" class="header__menu-link">Контакты</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="" class="header__menu-link">Новости</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div class="header__ctrl">
 		<div class="header__login">
-			<a href=""> Войти в аккаунт</a>
+			<a href="">Войти в аккаунт</a>
 		</div>
-		<div class="header__cart">
-			
-		</div>
+		<a href="korzina.html" class="header__cart">
+			0
+		</a>
 		<div class="header__search">
 			<form action="search">
-				<input type="text">
-				<button type="submit"></button>
+				<input type="text" placeholder="что ищем?">
+				<button type="submit">
+					<svg class="icon icon-lens">
+	   					<use xlink:href="/assets/build/sprites/global.svg#icon-lens"/>
+					</svg>
+				</button>
 			</form>
 		</div>
 	</div>

@@ -4,4 +4,67 @@
 	background-image url('/assets/images/first.jpg')
 	background-size cover
 	background-position center center
+	padding 50px
 	
+	&__mid
+		position relative
+		display flex
+		align-items center
+		padding-top 150px
+		justify-content center
+	.social
+		position absolute
+		left 0
+		top 50%
+		transform translateY(-50%)
+		&__list
+			display flex
+			flex-direction column
+			list-style-type none
+		&__item
+			margin 20px 0 
+		&__link
+			svg
+				height 20px
+				width 20px
+				fill white
+				path 
+					fill white!important
+	.slider
+		.slide
+			text-transform uppercase
+			font-family 'HelveticaNeue'
+			font-weight 600
+			padding 50px
+			display flex
+			align-items center
+			justify-content center
+			&__text 
+				>*
+					margin-bottom 20px
+					line-height 1em
+			&__num
+				font-size 20px 
+			&__type
+				font-size 20px 
+			&__big-name
+				font-size 110px
+			&__name
+				font-size 55px
+			&__description
+				font-size 20px
+			&__price
+				font-size 60px
+			&__btn
+				&:after
+					content '+'
+					margin-left 30px
+					font-size 1.3em
+			&__pic
+				margin-left 80px
+				img
+					height 550px
+		&__ctrls
+			postition absolute
+			right 0
+			bottom 0

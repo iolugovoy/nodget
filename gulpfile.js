@@ -108,6 +108,7 @@ gulp.task('default', function () {
                 log('Stopping server');
                 server.stop();
             });
+
         }
 
         if (DEV) {
@@ -292,9 +293,9 @@ function createSprite(name) {
                                     .pipe(svgmin({
                                         plugins: [
                                             {removeHiddenElems: true},
-                                            {removeAttrs: {
-                                                attrs: 'fill|stroke'
-                                            }},
+                                            // {removeAttrs: {
+                                            //     attrs: 'fill|stroke'
+                                            // }},
                                             {removeStyleElement: true}
                                         ],
                                         js2svg: {

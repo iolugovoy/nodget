@@ -1,24 +1,4 @@
 
-   .icon.icon-F {
-         width: 2.8125em;
-         height: 2.8125em;
-     }
-
-   .icon.icon-I {
-         width: 5.28321875em;
-         height: 5.28321875em;
-     }
-
-   .icon.icon-T {
-         width: 16em;
-         height: 16em;
-     }
-
-   .icon.icon-W {
-         width: 2.8125em;
-         height: 2.8125em;
-     }
-
    .icon.icon-arrow {
          width: 1.40625em;
          height: 0.25em;
@@ -34,9 +14,19 @@
          height: 4.3125em;
      }
 
+   .icon.icon-facebook {
+         width: 12.774625em;
+         height: 12.774625em;
+     }
+
    .icon.icon-hotel {
          width: 2.65625em;
          height: 2.65625em;
+     }
+
+   .icon.icon-instagram {
+         width: 17.2198125em;
+         height: 17.2198125em;
      }
 
    .icon.icon-lens {
@@ -47,4 +37,14 @@
    .icon.icon-mobile {
          width: 1.90625em;
          height: 2.96875em;
+     }
+
+   .icon.icon-vk {
+         width: 16em;
+         height: 16em;
+     }
+
+   .icon.icon-youtube {
+         width: 14.40628125em;
+         height: 14.40628125em;
      }

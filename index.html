@@ -23,39 +23,56 @@
 <body>
     <div class="body">
         <header class="header">
-	<div class="header__logo">
-		<img src="/assets/images/logo-white.svg" alt="Nodget computers">
-	</div>
-	<div class="header__menu">
-		<ul class="header__menu-list">
-			<li class="header__menu-item">
-				<a class="header__menu-link" href="">Продукты</a>
-			</li>
-			<li class="header__menu-item">
-				<a href="" class="header__menu-link">Аксессуары</a>
-			</li>
-			<li class="header__menu-item">
-				<a href="" class="header__menu-link">О нас</a>
-			</li>
-			<li class="header__menu-item">
-				<a href="" class="header__menu-link">Контакты</a>
-			</li>
-			<li class="header__menu-item">
-				<a href="" class="header__menu-link">Новости</a>
-			</li>
-		</ul>
+	<div class="header__left">
+		<a href="/" class="header__logo">
+			<img src="/assets/images/logo-white.svg" alt="Nodget computers">
+		</a>
+		<div class="header__menu">
+			<ul class="header__menu-list">
+				<li class="header__menu-item">
+					<a class="header__menu-link" href="">Продукты</a>
+					<ul class="header__submenu-list">
+						<li class="header__submenu-item">
+							<a href="" class="header__menu-link">mini tower</a>
+						</li>
+						<li class="header__submenu-item">
+							<a href="" class="header__menu-link">mid tower</a>
+						</li>
+						<li class="header__submenu-item">
+							<a href="" class="header__menu-link">big tower</a>
+						</li>
+					</ul>
+				</li>
+				<li class="header__menu-item">
+					<a href="" class="header__menu-link">Аксессуары</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="" class="header__menu-link">О нас</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="" class="header__menu-link">Контакты</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="" class="header__menu-link">Новости</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div class="header__ctrl">
 		<div class="header__login">
-			<a href=""> Войти в аккаунт</a>
+			<a href="">Войти в аккаунт</a>
 		</div>
-		<div class="header__cart">
-			
-		</div>
+		<a href="korzina.html" class="header__cart">
+			0
+		</a>
 		<div class="header__search">
 			<form action="search">
-				<input type="text">
-				<button type="submit"></button>
+				<input type="text" placeholder="что ищем?">
+				<button type="submit">
+					<svg class="icon icon-lens">
+	   					<use xlink:href="/assets/build/sprites/global.svg#icon-lens"/>
+					</svg>
+				</button>
 			</form>
 		</div>
 	</div>
@@ -66,46 +83,80 @@
                 <div class="top__mid">
                     <div class="top__social social">
                         <ul class="social__list">
-                            <li class="social__item"><a href="http://instagram.com/nodgetcomputers" class="social__link" target="blank">Insta</a></li>
-                            <li class="social__item"><a href="https://vk.com/nodget" class="social__link" target="blank">VK</a></li>
-                            <li class="social__item"><a href="https://www.facebook.com/Nodget/" class="social__link" target="blank">Facebook</a></li>
-                            <li class="social__item"><a href="https://www.youtube.com/channel/UC92_25JcKlR8H3zUqmhETqg/" class="social__link" target="blank">Youtube.com</a></li>
+                            <li class="social__item">
+                                <a href="http://instagram.com/nodgetcomputers" class="social__link" target="blank">
+                                    <svg class="icon icon-instagram">
+                                        <use xlink:href="/assets/build/sprites/global.svg#icon-instagram"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://vk.com/nodget" class="social__link" target="blank">
+                                    <svg class="icon icon-vk">
+                                        <use xlink:href="/assets/build/sprites/global.svg#icon-vk"/>
+                                    </svg>
+                            </a></li>
+                                <li 
+                                class="social__item">
+                                <a href="https://www.facebook.com/Nodget/" class="social__link" target="blank">
+                                    <svg class="icon icon-facebook">
+                                        <use xlink:href="/assets/build/sprites/global.svg#icon-facebook"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://www.youtube.com/channel/UC92_25JcKlR8H3zUqmhETqg/" class="social__link" target="blank">
+                                    <svg class="icon icon-youtube">
+                                        <use xlink:href="/assets/build/sprites/global.svg#icon-youtube"/>
+                                    </svg>
+                                
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="top__slider slider">
                         <ul class="slider__list">
                             <li class="slider__item slide">
                                 <div class="slide__text">
-                                    <div class="slide__num"></div>
-                                    <div class="slide__big-name"></div>
-                                    <div class="slide__name"></div>
-                                    <div class="slide__description"></div>
-                                    <div class="slide__price"></div>
-                                    <div class="slide__btn"></div>
+                                    <div class="slide__num">01.</div>
+                                    <div class="slide__type">Игровая станция</div>
+                                    <div class="slide__big-name">Nodget</div>
+                                    <div class="slide__name">Manta</div>
+                                    <div class="slide__description">компактный корпус. безграничные возможности</div>
+                                    <div class="slide__price">92 990 Р</div>
+                                    <div class="slide__btn buy-btn">Купить</div>
                                 </div>
-                                <div class="slide__pic"></div>
+                                <div class="slide__pic">
+                                    <img src="/assets/images/manta.png" alt="Manta Nodget">
+                                </div>
                             </li>
                             <li class="slider__item slide">
                                 <div class="slide__text">
-                                    <div class="slide__num"></div>
-                                    <div class="slide__big-name"></div>
-                                    <div class="slide__name"></div>
-                                    <div class="slide__description"></div>
-                                    <div class="slide__price"></div>
-                                    <div class="slide__btn"></div>
+                                    <div class="slide__num">01.</div>
+                                    <div class="slide__type">Игровая станция</div>
+                                    <div class="slide__big-name">Nodget</div>
+                                    <div class="slide__name">Manta</div>
+                                    <div class="slide__description">компактный корпус. безграничные возможности</div>
+                                    <div class="slide__price">92 990 Р</div>
+                                    <div class="slide__btn buy-btn">Купить</div>
                                 </div>
-                                <div class="slide__pic"></div>
+                                <div class="slide__pic">
+                                    <img src="/assets/images/manta.png" alt="Manta Nodget">
+                                </div>
                             </li>
                             <li class="slider__item slide">
                                 <div class="slide__text">
-                                    <div class="slide__num"></div>
-                                    <div class="slide__big-name"></div>
-                                    <div class="slide__name"></div>
-                                    <div class="slide__description"></div>
-                                    <div class="slide__price"></div>
-                                    <div class="slide__btn"></div>
+                                    <div class="slide__num">01.</div>
+                                    <div class="slide__type">Игровая станция</div>
+                                    <div class="slide__big-name">Nodget</div>
+                                    <div class="slide__name">Manta</div>
+                                    <div class="slide__description">компактный корпус. безграничные возможности</div>
+                                    <div class="slide__price">92 990 Р</div>
+                                    <div class="slide__btn buy-btn">Купить</div>
                                 </div>
-                                <div class="slide__pic"></div>
+                                <div class="slide__pic">
+                                    <img src="/assets/images/manta.png" alt="Manta Nodget">
+                                </div>
                             </li>
                         </ul>    
                         <div class="slider__ctrls">
@@ -114,7 +165,6 @@
             <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
         </svg>
 	</div>
-    <div class="owl-arrows__divider"></div>
     <div class="owl-arrows__next">
     	<svg class="icon icon-arrow">
 	        <use xlink:href="/assets/build/sprites/global.svg#icon-arrow"/>
@@ -122,33 +172,45 @@
     </div>
                         </div>              
                     </div>
+                    
                 </div>
             </section>
+
             <section class="popular">
                 <div class="popular__slider slider">
                     <ul class="slider__list">
                         <li class="slider__item slide">
-                            <div class="slide__pic"></div>
+                            <div class="slide__pic">
+                                <img src="/assets/images/manta.png" alt="Manta Nodget">
+                            </div>
                             <div class="slide__name">Alekto</div>
                             <div class="slide__description">Новая эра непревзойдённой производительности</div>
                         </li>
                         <li class="slider__item slide">
-                            <div class="slide__pic"></div>
+                            <div class="slide__pic">
+                                <img src="/assets/images/manta.png" alt="Manta Nodget">
+                            </div>
                             <div class="slide__name">Alekto</div>
                             <div class="slide__description">Новая эра непревзойдённой производительности</div>
                         </li>
                         <li class="slider__item slide">
-                            <div class="slide__pic"></div>
+                            <div class="slide__pic">
+                                <img src="/assets/images/manta.png" alt="Manta Nodget">
+                            </div>
                             <div class="slide__name">Alekto</div>
                             <div class="slide__description">Новая эра непревзойдённой производительности</div>
                         </li>
                         <li class="slider__item slide">
-                            <div class="slide__pic"></div>
+                            <div class="slide__pic">
+                                <img src="/assets/images/manta.png" alt="Manta Nodget">
+                            </div>
                             <div class="slide__name">Alekto</div>
                             <div class="slide__description">Новая эра непревзойдённой производительности</div>
                         </li>
                         <li class="slider__item slide">
-                            <div class="slide__pic"></div>
+                            <div class="slide__pic">
+                                <img src="/assets/images/manta.png" alt="Manta Nodget">
+                            </div>
                             <div class="slide__name">Alekto</div>
                             <div class="slide__description">Новая эра непревзойдённой производительности</div>
                         </li>
@@ -182,10 +244,35 @@
                         <h3>Присоединяйтесь к нам в социальных сетях</h3>    
                         <div class="connect__text">Учавствуйте в наших конкурсах и раздачах в социальных сетях</div>
                         <ul class="social__list">
-                            <li class="social__item"><a href="http://instagram.com/nodgetcomputers" class="social__link" target="blank">Insta</a></li>
-                            <li class="social__item"><a href="https://vk.com/nodget" class="social__link" target="blank">VK</a></li>
-                            <li class="social__item"><a href="https://www.facebook.com/Nodget/" class="social__link" target="blank">Facebook</a></li>
-                            <li class="social__item"><a href="https://www.youtube.com/channel/UC92_25JcKlR8H3zUqmhETqg/" class="social__link" target="blank">Youtube.com</a></li>
+                            <li class="social__item">
+                                <a href="http://instagram.com/nodgetcomputers" class="social__link" target="blank">
+                                    <svg class="icon icon-instagram">
+                                        <use xlink:href="/assets/build/sprites/global.svg#icon-instagram"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://vk.com/nodget" class="social__link" target="blank">
+                                    <svg class="icon icon-vk">
+                                        <use xlink:href="/assets/build/sprites/global.svg#icon-vk"/>
+                                    </svg>
+                            </a></li>
+                                <li 
+                                class="social__item">
+                                <a href="https://www.facebook.com/Nodget/" class="social__link" target="blank">
+                                    <svg class="icon icon-facebook">
+                                        <use xlink:href="/assets/build/sprites/global.svg#icon-facebook"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://www.youtube.com/channel/UC92_25JcKlR8H3zUqmhETqg/" class="social__link" target="blank">
+                                    <svg class="icon icon-youtube">
+                                        <use xlink:href="/assets/build/sprites/global.svg#icon-youtube"/>
+                                    </svg>
+                                
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="connect__mailing mailing">
