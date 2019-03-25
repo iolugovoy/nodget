@@ -10,7 +10,7 @@
 		position relative
 		display flex
 		align-items center
-		padding-top 150px
+		padding-top 100px
 		justify-content center
 	.social
 		position absolute
@@ -66,7 +66,32 @@
 				margin-left 80px
 				img
 					height 550px
-		&__ctrls
-			postition absolute
+		&__ctrls.owl-arrows
+			position absolute
+			z-index 10
 			right 0
-			bottom 0
+			bottom 50px
+			display flex
+			flex-direction column
+	&__bottom
+		display flex
+		align-items flex-end 
+		justify-content space-between
+	&__share
+		display flex
+		align-items center
+	&__share-links
+		display none
+		width 0
+	&__share-button
+		order 1
+		margin-left 10px
+		.icon-share
+			width 30px
+			height 30px
+	&__phone-link
+		font-size 19px
+	&__callback-link
+		font-size 13px
+	&__phone
+		letter-spacing .2em

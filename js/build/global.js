@@ -30,6 +30,7 @@
 @import './js/includes/toggle.js';
 @import './js/includes/global-overlay.js';
 @import './js/includes/first.js';
+@import './js/includes/popular.js';
 
 
 

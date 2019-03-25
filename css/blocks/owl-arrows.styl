@@ -2,16 +2,15 @@
     display flex
     align-items center
     color #161717
+    .icon.arrow-left
+        arrow(2px, white, 15px, 30px, left)
     &__prev, &__next
         cursor pointer
         padding 15px
         &.disabled
-            opacity 0.5
-            cursor default
-    &__prev
+            .icon
+                opacity 0.2
+                cursor default
+    &__next
         transform rotateY(180deg)
-    &__divider
-        height 30px
-        width 1px
-        background-color currentColor
                 

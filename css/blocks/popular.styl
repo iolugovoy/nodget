@@ -1,0 +1,74 @@
+.popular
+	padding 50px
+	display flex
+	align-items center
+	justify-content center
+	flex-direction column
+	min-height 800px
+	height 100vh
+	background-image url("/assets/images/popular.jpg")
+	h2
+		font-size 75px 
+		font-family Muller
+		font-weight 600
+		text-transform uppercase
+	.slider
+		position relative
+		&__list
+			list-style-type none
+			width 1000px
+		.slide
+			a
+				text-align center
+				display flex
+				flex-direction column
+				align-items center
+				padding 40px 10px
+				position relative
+				margin 30px 0
+				&:hover, &:focus
+					color white
+				&:hover
+					&:before
+						opacity 1
+				&:before
+					content ''
+					opacity 0
+					transition opacity .2s ease-in-out
+					box-shadow 0px 0px 26px 2px #ce1a22
+					border-radius 20px 0 20px 0
+					full-fill()
+					background-color #ce1a22					
+					z-index -1
+			&__pic
+				margin-bottom 40px
+				height 280px
+				display flex
+				align-items center
+				img
+					height auto
+					max-height 320px
+					max-width 250px
+					
+			&__name 
+				margin-bottom 20px
+				text-transform uppercase
+				font-size 30px
+				letter-spacing .2em
+			&__description 
+				width 200px
+				font-size 13px
+				letter-spacing .2em
+		.owl-arrows
+			position absolute
+			top 50%
+			width 100%
+			display flex
+			justify-content space-between
+			.owl-arrows__prev, .owl-arrows__next
+				z-index 10
+		.owl-item
+			opacity 0
+			transition opacity .2s ease-in-out
+		.owl-item.active
+			opacity 1
