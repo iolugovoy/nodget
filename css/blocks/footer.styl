@@ -1,4 +1,31 @@
 .footer
 	display flex
 	flex-direction column
-	
+	padding 50px
+	padding-top 115px
+	font-family 'HelveticaNeue'
+	&__nav
+		display flex
+		flex-direction row
+		padding-right 15%
+		justify-content space-between
+		margin-bottom 100px
+	.menu
+		display flex
+		flex-direction column
+		font-size 16px
+		&__list
+			list-style-type none
+			opacity .7
+		&__title
+			font-weight 600
+			margin-bottom 1em
+	&__copyright 
+		full-centered()
+		position relative
+	&__logo
+		position absolute
+		bottom 0
+		right 0
+		img
+			height 64px
