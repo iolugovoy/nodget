@@ -1,11 +1,15 @@
 .top
-	min-height 800px
+	min-height 900px
 	height 100vh
 	background-image url('/assets/images/first.jpg')
 	background-size cover
 	background-position center center
 	padding 50px
-	
+	display flex
+	flex-direction column
+	justify-content space-between
+	+below(1300)
+		min-height 750px
 	&__mid
 		position relative
 		display flex
@@ -42,21 +46,35 @@
 			align-items center
 			justify-content center
 			&__text 
+				+below(1400)
+					width 40%
 				>*
-					margin-bottom 20px
+					margin-bottom 12px
 					line-height 1em
 			&__num
 				font-size 20px 
+				+below(1300)
+					font-size 16px 
 			&__type
 				font-size 20px 
+				+below(1300)
+					font-size 16px 
 			&__big-name
 				font-size 110px
+				+below(1300)
+					font-size 80px
 			&__name
 				font-size 55px
+				+below(1300)
+					font-size 40px
 			&__description
 				font-size 20px
+				+below(1300)
+					font-size 16px
 			&__price
 				font-size 60px
+				+below(1300)
+					font-size 45px
 			&__btn
 				&:after
 					content '+'
@@ -64,15 +82,23 @@
 					font-size 1.3em
 			&__pic
 				margin-left 80px
+				+below(1400)
+					margin-left 30px
 				img
 					height 550px
+					width auto
+					+below(1300)
+						height 300px
+					
 		&__ctrls.owl-arrows
 			position absolute
 			z-index 10
-			right 0
+			right 50px
 			bottom 50px
 			display flex
 			flex-direction column
+			+below(1400)
+				right 0
 	&__bottom
 		display flex
 		align-items flex-end 
@@ -80,12 +106,19 @@
 	&__share
 		display flex
 		align-items center
+		position relative
 	&__share-links
 		display none
-		width 0
+		width 170px
+		&.shown
+			display block
+			position absolute
+			top 50% 
+			left 0
+			transform translate(-100%, -50%)
 	&__share-button
 		order 1
-		margin-left 10px
+		height 30px
 		.icon-share
 			width 30px
 			height 30px

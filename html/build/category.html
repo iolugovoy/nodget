@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+    @@include('../blocks/head.html', {
+        "title": "Nodget игровые компьютеры"
+    })
+    <!--link rel="preload" href="/assets/build/index.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+    <noscript><link rel="stylesheet" href="/assets/build/index.css"></noscript-->
+</head>
+<body>
+    <div class="body">
+        @@include('../blocks/header.html')
+        <div class="main"> 
+        @@include('../blocks/category-first.html')
+        @@include('../blocks/table.html')
+        @@include('../blocks/text.html')
+        </div>
+    </div>
+    @@include("../blocks/append.html")
+    <script src="/assets/build/global.js"></script>
+</body>
+</html>

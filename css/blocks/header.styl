@@ -13,6 +13,8 @@
 	&__logo
 		img
 			height 65px
+			+below(1300)
+				height 45px
 	&__menu
 		justify-self start
 		margin-left 80px
@@ -56,8 +58,12 @@
 		transition all .2s ease-in-out
 		padding 12px 20px
 		display block
+		+below(1400)
+			font-size 10px
 		&:hover, &:focus
 			color #ce1a22
+		&.active
+			font-weight 700
 	&__login
 		font-size 12px
 		color #fff
@@ -66,6 +72,8 @@
 		padding-right 20px
 		border-right 1px solid white
 		margin-right 30px 
+		+below(1400)
+			font-size 10px
 		&:hover, &:focus
 			color #ce1a22
 	&__ctrl
@@ -80,9 +88,26 @@
 		align-items center
 		background-color #ce1a21
 		border-radius 50%
-		&:hover
+		position relative
+		transition box-shadow .2s ease-in-out
+		box-shadow 0px 0px 0px 0px #ce1a22
+		+below(1400)
+			width 35px
+			height 35px
+		&:hover, &:focus
 			color currentColor
-			background-color #ca2e77
+			box-shadow 0px 0px 26px 2px #ce1a22
+			.header__cart-price
+				opacity 1
+	&__cart-price
+		position absolute 
+		top 165%
+		transform rotate(90deg)
+		width 100px
+		height 30px 
+		full-centered()
+		opacity 0
+		transition opacity .2s ease-in-out
 	&__search
 		&:hover
 			input 
@@ -96,6 +121,9 @@
 			.icon.icon-lens
 				width 30px
 				height 30px
+				+below(1300)
+					width 20px
+					height 20px
 				path
 					fill white
 		form

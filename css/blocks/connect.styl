@@ -5,15 +5,22 @@
 	padding 50px
 	display flex
 	flex-direction column
+	justify-content space-between
 	font-family 'HelveticaNeue'
 	padding-top 150px
+	+below(xl)
+		padding-top 50px
 	&__reg
 		h2
 			font-size 85px
 			font-weight bold
+			+below(1300)
+				font-size 55px
 		h3
 			font-size 35px
 			font-weight bold
+			+below(1300)
+				font-size 28px
 		form
 			display flex
 			font-size 14 px

@@ -9,11 +9,12 @@ app.on('init', () => {
 	};
 
 
-	// let $share = $('.top__share');
-	// console.log($share);
-	// if($share.length){
-	// 	let linksWrapper = $share.find('.top__share-links');
-	// 	let shareButton = $share.find('.top__share-button');
+	let $share = $('.top__share');
+	console.log($share);
+	if($share.length){
+		let linksWrapper = $share.find('.top__share-links');
+		let shareButton = $share.find('.top__share-button');
+		console.log(linksWrapper, shareButton);
 	// 	shareButton.on('focus hover', function(){
 	// 		console.log('событие');
 	// 		(function toggleShareLinks(linksWrapper) {
@@ -29,10 +30,10 @@ app.on('init', () => {
 	// 				linksWrapper.data('expanded') = 'false';
 	// 			}
 	// 		})()
-	// 	});
+		// });
 
 		
-	// }
+	}
 
 
 });	
