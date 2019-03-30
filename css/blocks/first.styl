@@ -8,14 +8,28 @@
 	display flex
 	flex-direction column
 	justify-content space-between
-	+below(1300)
+	position relative
+	+below(1300px)
 		min-height 750px
+	&__bgs
+		full-fill()
+		background-size cover
+		background-position center center
+	&__bg
+		full-fill()
+		background-size cover
+		background-position center center
+		opacity 0
+		transition opacity .3s ease-in-out
+		&.current
+			opacity 1
 	&__mid
 		position relative
 		display flex
 		align-items center
 		padding-top 100px
 		justify-content center
+	
 	.social
 		position absolute
 		left 0
@@ -46,34 +60,34 @@
 			align-items center
 			justify-content center
 			&__text 
-				+below(1400)
+				+below(1300px)
 					width 40%
 				>*
 					margin-bottom 12px
 					line-height 1em
 			&__num
 				font-size 20px 
-				+below(1300)
+				+below(1300px)
 					font-size 16px 
 			&__type
 				font-size 20px 
-				+below(1300)
+				+below(1300px)
 					font-size 16px 
 			&__big-name
 				font-size 110px
-				+below(1300)
+				+below(1300pxpx)
 					font-size 80px
 			&__name
 				font-size 55px
-				+below(1300)
+				+below(1300px)
 					font-size 40px
 			&__description
 				font-size 20px
-				+below(1300)
+				+below(1300px)
 					font-size 16px
 			&__price
 				font-size 60px
-				+below(1300)
+				+below(1300px)
 					font-size 45px
 			&__btn
 				&:after
@@ -87,7 +101,7 @@
 				img
 					height 550px
 					width auto
-					+below(1300)
+					+below(1300px)
 						height 300px
 					
 		&__ctrls.owl-arrows
@@ -97,12 +111,13 @@
 			bottom 50px
 			display flex
 			flex-direction column
-			+below(1400)
+			+below(1400px)
 				right 0
 	&__bottom
 		display flex
 		align-items flex-end 
 		justify-content space-between
+		z-index 1
 	&__share
 		display flex
 		align-items center
@@ -119,9 +134,17 @@
 	&__share-button
 		order 1
 		height 30px
+		&:focus, &:hover
+			outline none
+			cursor pointer
+			.icon-share
+				color #ce1a21	
 		.icon-share
 			width 30px
 			height 30px
+			svg
+				fill currentColor
+			
 	&__phone-link
 		font-size 19px
 	&__callback-link

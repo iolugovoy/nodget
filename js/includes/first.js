@@ -6,34 +6,22 @@ app.on('init', () => {
 			items: 1,
 			start: 1
 		}, ['xs', 'sm', 'md', 'lg', 'xl', 'ml'], $this.find('.owl-arrows__prev'), $this.find('.owl-arrows__next'));
+		
+		$this.find('.slider__list').on('changed.owl.carousel', function(event) {
+	    	$('.top__bg').removeClass('current');
+	    	$('.top__bg').eq(event.item.index).addClass('current');
+		})
 	};
 
-
 	let $share = $('.top__share');
-	console.log($share);
 	if($share.length){
 		let linksWrapper = $share.find('.top__share-links');
 		let shareButton = $share.find('.top__share-button');
-		console.log(linksWrapper, shareButton);
-	// 	shareButton.on('focus hover', function(){
-	// 		console.log('событие');
-	// 		(function toggleShareLinks(linksWrapper) {
-	// 			if (linksWrapper.data('expanded') == 'false') {
-	// 				linksWrapper.animate({
-	// 					width: 100%
-	// 				});
-	// 				linksWrapper.data('expanded') = 'true';
-	// 			} else {
-	// 				linksWrapper.animate({
-	// 					width: 0
-	// 				});
-	// 				linksWrapper.data('expanded') = 'false';
-	// 			}
-	// 		})()
-		// });
-
-		
+		shareButton.click(function(){
+			linksWrapper.toggleClass('shown');
+		});		
+		app.on('scroll', () => {
+			linksWrapper.removeClass('shown');
+		})
 	}
-
-
 });	
