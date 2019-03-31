@@ -157,6 +157,11 @@
   height: 2.96875em;
 }
 
+.icon.icon-package {
+  width: 14.80625em;
+  height: 14.80625em;
+}
+
 .icon.icon-share {
   width: 15.41875em;
   height: 13.865625em;
@@ -3096,6 +3101,10 @@ button {
   font-weight: bold;
 }
 
+* {
+  line-height: 1;
+}
+
 .breadcrumbs {
   font-size: 14px;
   color: #8c8c8c;
@@ -3425,6 +3434,7 @@ button {
   background-size: cover;
   background-position: center center;
   padding: 50px;
+  padding-top: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3473,7 +3483,6 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 100px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -3481,7 +3490,7 @@ button {
 
 .top .social {
   position: absolute;
-  left: 0;
+  left: 50px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -3603,6 +3612,49 @@ button {
   -ms-flex-pack: justify;
   justify-content: space-between;
   z-index: 1;
+  position: relative;
+}
+
+.top__bottom .scroll {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.top__bottom .scroll__stage {
+  width: 20px;
+  height: 45px;
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.top__bottom .scroll__trigger {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-animation: scroll 1s 5 ease-in-out;
+  animation: scroll 1s 5 ease-in-out;
 }
 
 .top__share {
@@ -3667,6 +3719,34 @@ button {
 
 .top__phone {
   letter-spacing: 0.2em;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    top: 3px;
+  }
+
+  50% {
+    top: 25px;
+  }
+
+  100% {
+    top: 3px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    top: 3px;
+  }
+
+  50% {
+    top: 25px;
+  }
+
+  100% {
+    top: 3px;
+  }
 }
 
 .buy-btn {
