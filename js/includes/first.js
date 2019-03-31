@@ -27,8 +27,10 @@ app.on('init', () => {
 
 	let $scrolbutton = $('.top__scroll')
 	if($scrolbutton.length) {
+		let ScreenHeight = window.innerHeight;
+
 		$scrolbutton.click(function(){
-			scrollTop(100vh, true);
+			scrollTop(ScreenHeight, true);
 		})
 	}
 });	
