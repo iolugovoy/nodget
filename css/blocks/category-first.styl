@@ -1,26 +1,45 @@
 .category.top
-	align-items center
-	&__mid
-		padding-top 120px	
+	position relative
+	
+	&:after
+		content ''
+		position absolute 
+		bottom 0
+		left 0 
+		right 0
+		top 98%
+		background linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)
+		z-index 5
+	.top__mid
+		padding-top 120px
+		padding-left 10%
+		padding-right 10%
 	.preview
 		display flex
 		flex-direction column
-		
+		margin-right 30%
+		font-family 'HelveticaNeue'	
 		&__text 
-			+below(1300px)
-				width 40%
+			max-width 750px
+			font-family 'Muller'
+			font-size 17px 
 			>*
 				margin-bottom 12px
 				line-height 1em
 		&__num
 			font-size 20px 
+			font-weight bold
 			+below(1300px)
 				font-size 16px 
 		&__type
 			font-size 20px 
+			font-weight bold
+			text-transform uppercase
 			+below(1300px)
 				font-size 16px 
 		&__big-name
 			font-size 110px
-			+below(1300pxpx)
+			text-transform uppercase
+			font-weight bold
+			+below(1300px)
 				font-size 80px

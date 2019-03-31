@@ -24,4 +24,11 @@ app.on('init', () => {
 			linksWrapper.removeClass('shown');
 		})
 	}
+
+	let $scrolbutton = $('.top__scroll')
+	if($scrolbutton.length) {
+		$scrolbutton.click(function(){
+			scrollTop(100vh, true);
+		})
+	}
 });	

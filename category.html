@@ -68,7 +68,6 @@
 		</a>
 		<div class="header__search">
 			<form action="search">
-				<input type="text" placeholder="что ищем?">
 				<button type="submit">
 					<svg class="icon icon-lens">
 	   					<use xlink:href="/assets/build/sprites/global.svg#icon-lens"/>
@@ -81,6 +80,9 @@
 
         <div class="main"> 
         <section class="top category">
+    <div class="top__bgs">
+        <div class="top__bg current" style="background-image: url(/assets/images/mini-tower.jpg)"></div>
+    </div>
     <div class="top__social social">
         <ul class="social__list">
             <li class="social__item">
@@ -137,19 +139,19 @@
                 <a href="/callback.html" class="ajax-link">Перезвоните мне</a>
             </div>
         </div>
-        <div class="top__scroll scroll">
+        <button class="top__scroll scroll">
             <div class="scroll__stage">
                 <div class="scroll__trigger"></div>
             </div>
             <div class="scroll__text">scroll</div>
-        </div>
+        </button>
         <div class="top__share">
             <button class="top__share-button">
                 <svg class="icon icon-share">
                     <use xlink:href="/assets/build/sprites/global.svg#icon-share"/>                                    
                 </svg>
             </button>
-            <div class="top__share-links shown" data-expanded="false">  
+            <div class="top__share-links" data-expanded="false">  
                 <div class="ya-share2" data-services="vkontakte,facebook,twitter,viber,whatsapp,telegram"></div>
             </div>
             
@@ -159,7 +161,9 @@
         <section class="catalog">
 	<div class="catalog__table">
 		<div class="catalog__item item">
-			<div class="item__pic"></div>
+			<div class="item__pic">
+				<img src="/assets/images/alecta.png" alt="Nodge Alecto">
+			</div>
 			<div class="item__info">
 				<div class="item__name">Nodget Alecto game station</div>
 				<div class="item__buy">
@@ -178,16 +182,18 @@
 	                            <use xlink:href="/assets/build/sprites/global.svg#icon-package"/>
 	                        </svg>
 						</div>
-						<div class="item__count-text"></div>
+						<div class="item__count-text">много</div>
 					</div>
 					<div class="item__page">
-						<a href="">Подробнее</a>
+						<a href="">подробнее</a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="catalog__item item">
-			<div class="item__pic"></div>
+			<div class="item__pic">
+				<img src="/assets/images/alecta.png" alt="Nodge Alecto">
+			</div>
 			<div class="item__info">
 				<div class="item__name">Nodget Alecto game station</div>
 				<div class="item__buy">
@@ -198,7 +204,7 @@
 				</div>
 				<div class="item__more">
 					<div class="item__description">
-						Строгий выдержанный дизайн корпуса позволит идеально вписать компьютер в любой интерьер, а комплектующие высочайшего качества помогут забыть о лагах и сосредоточиться на игре
+						Строгий выдержанный дизайн корпуса позволит идеально вписать компьютер в любой интерьер, а комплектующие высочайшего качества помогут забыть о лагах и сосредоточиться на игре. Строгий выдержанный дизайн корпуса позволит идеально вписать компьютер в любой интерьер, а комплектующие высочайшего качества помогут забыть о лагах и сосредоточиться на игре. Строгий выдержанный дизайн корпуса позволит идеально вписать компьютер в любой интерьер, а комплектующие высочайшего качества помогут забыть о лагах и сосредоточиться на игре
 					</div>
 					<div class="item__count">
 						<div class="item__count-pic">
@@ -206,16 +212,18 @@
 	                            <use xlink:href="/assets/build/sprites/global.svg#icon-package"/>
 	                        </svg>
 						</div>
-						<div class="item__count-text"></div>
+						<div class="item__count-text">много</div>
 					</div>
 					<div class="item__page">
-						<a href="">Подробнее</a>
+						<a href="">подробнее</a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="catalog__item item">
-			<div class="item__pic"></div>
+			<div class="item__pic">
+				<img src="/assets/images/alecta.png" alt="Nodge Alecto">
+			</div>
 			<div class="item__info">
 				<div class="item__name">Nodget Alecto game station</div>
 				<div class="item__buy">
@@ -234,10 +242,10 @@
 	                            <use xlink:href="/assets/build/sprites/global.svg#icon-package"/>
 	                        </svg>
 						</div>
-						<div class="item__count-text"></div>
+						<div class="item__count-text">много</div>
 					</div>
 					<div class="item__page">
-						<a href="">Подробнее</a>
+						<a href="">подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -249,7 +257,56 @@
 		</p>
 	</div>
 </section>
-        
+        <div class="footer">
+    <div class="footer__nav">
+        <div class="footer__menu menu">
+            <div class="menu__title">Магазин</div>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="" class="menu__link">Mini Tower</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Mid Tower</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Big Tower</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Мониторы</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Мышы</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Клавиатуры</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Наушники</a></li>
+            </ul>
+        </div>    
+        <div class="footer__menu menu">
+            <div class="menu__title">О нас</div>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="" class="menu__link">О бренде</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Обзоры</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Стать партнером</a></li>
+            </ul>
+        </div>    
+        <div class="footer__menu menu">
+            <div class="menu__title">Новости</div>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="" class="menu__link">Гарантия</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Персональные данные</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Положения и условия</a></li>
+            </ul>
+        </div>    
+        <div class="footer__menu menu">
+            <div class="menu__title">Наши ресурсы</div>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="" class="menu__link">Vk</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Facebook</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Youtube</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Twitter</a></li>
+                <li class="menu__item"><a href="" class="menu__link">What’s App</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Instagram</a></li>
+            </ul>
+        </div>    
+    </div>
+    <div class="footer__copyright">
+        <div>Copyright © 2019 Nodget computers. Все права защищены.</div>
+        <div class="footer__logo">
+            <img src="/assets/images/logo-white.svg" alt="Nodget computers">
+        </div>
+    </div>
+    
+</div>
         </div>
     </div>
     <div class="mobile-menu">
