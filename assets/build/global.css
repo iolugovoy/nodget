@@ -3475,9 +3475,9 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .top .social {
@@ -4164,6 +4164,71 @@ button {
 }
 
 .category.top.about .top__mid {
+  padding-top: 75px;
+  margin-bottom: 30px;
+}
+
+.contacts {
+  background-image: url("/assets/images/contacts.png");
+}
+
+.contacts__item {
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 2%;
+}
+
+.contacts .preview {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  max-width: 930px;
+  margin-right: 0;
+}
+
+.contacts .preview h1 {
+  font-weight: bold;
+  font-size: 90px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.contacts .preview p {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+.contacts .preview .buy-btn {
+  color: #fff;
+  margin-top: 20px;
+  text-transform: none;
+  font-size: 20px;
+}
+
+.contacts .mail {
+  display: inline-block;
+  position: relative;
+}
+
+.contacts .mail:after {
+  background-color: #fff;
+  background-color: currentColor;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -15%;
+  height: 3px;
+  width: 100%;
+}
+
+.category.top.contacts .preview {
+  margin-right: 0;
+}
+
+.category.top.contacts .top__mid {
   padding-top: 75px;
   margin-bottom: 30px;
 }
@@ -6086,6 +6151,18 @@ button {
   }
 
   .category.top.about .top__mid {
+    padding-top: 50px;
+  }
+
+  .contacts .preview h1 {
+    font-size: 75px;
+  }
+
+  .contacts .preview p {
+    font-size: 16px;
+  }
+
+  .category.top.contacts .top__mid {
     padding-top: 50px;
   }
 
