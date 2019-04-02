@@ -1,7 +1,24 @@
-<div>
-	что-то там 
-
-
-	<p>еще чуть </p>	
-	<p>и еще чуть </p>
-</div>
+<form class="form" action="/html/blocks/modal.html" method="post" enctype="application/x-www-form-urlencoded" data-ajax>
+    <div class="form__container">
+        <div class="form__title title">Задать вопрос</div>
+        <div class="form__row">
+            <div class="form__input-title required">Имя и фамилия:</div>
+            <input type="text" name="Name">
+        </div>
+        <div class="form__row">
+            <div class="form__input-title required">Email:</div>
+            <input type="email" class="input-error" name="Email">
+            <div class="error">Поле «Email» заполнено не верно.</div>
+        </div>
+        <div class="form__row">
+            <div class="form__input-title">Вопрос:</div>
+            <textarea name="Question" cols="20" rows="5" aria-required="true"></textarea>
+        </div>
+        <div class="form__row">
+            <div class="warning">Нажимая на кнопку, вы даёте <a href="#">согласие на&nbsp;обработку</a> своих персональных данных.</div>
+        </div>
+        <div class="form__row">
+            <button class="button red-btn" type="submit">Отправить</button>
+        </div>
+    </div>
+</form> 
