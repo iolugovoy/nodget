@@ -1,0 +1,166 @@
+.item-page
+	position relative
+	&:after
+		content ''
+		z-index -1
+		position absolute
+		top -50vh
+		left 0 
+		right 0
+		bottom 0 
+		background-image url('/assets/images/pattern.jpg')
+	.top
+		background-image none
+		align-items center
+		padding-top 150px
+		min-height 900px
+		&__bottom
+			align-self stretch
+		&__mid
+			width 68%
+			flex-direction column
+			
+			.breadcrumbs
+				color #808080
+				font-size 14px 
+				align-self flex-start
+				margin-bottom 50px
+				&__list
+					list-style-type none
+				&__item:not(:last-child)
+					&:after
+						content '>'
+			.item
+				display flex
+				justify-conent space-between
+				&__title
+					font-size 50px
+					font-weight 300
+					margin-bottom 10px
+					+below(1600px)
+						font-size 40px
+					+below(1450px)
+						font-size 35px
+						
+				&__pic
+					width 45%
+					position relative
+					.owl-arrows__prev
+						position absolute
+						left -30px
+						top 55%
+					.owl-arrows__next
+						position absolute
+						right -30px
+						top 55%
+				&__delimeter
+					height 65%
+					width 2px
+					margin-left 50px 
+					margin-right 50px
+					background-color #808080
+					align-self flex-start
+					margin-top 15px
+					flex-shrink 0
+				.slider
+					width 520px
+					+below(1850px)
+						width 460px
+					+below(1600px)
+						width 420px
+					+below(1450px)
+						width 390px
+					+below(1350px)
+						width 350px
+					.slide
+						padding 25px
+						max-height 430px
+						img
+							max-height 100%
+							max-width 100%
+							height auto 
+							width auto
+				&__actions
+					display flex
+					widht 100%
+					justify-content space-around
+					padding 20px 0
+					border-top 1px solid #808080
+					border-bottom 1px solid #808080	
+					text-transform uppercase
+					font-size 15px
+					color #808080
+					+below(1600px)
+						font-size 12px
+				&__action 
+					cursor pointer
+					transition color .2s ease-in-out
+					&:hover
+						color white
+				.share-btn
+					position relative
+					.share-block
+						display none
+						position absolute
+						top 50%
+						left 50%
+						transform translate(-50%, -50%)						
+						width 190px
+				&__buy
+					padding 30px 0
+					display flex 
+					justify-content space-between
+					padding-left 20px 
+					align-items center
+					&-btn
+						font-size 23px
+						padding-top 10px
+						padding-bottom 10px
+						+below(1350px)
+							font-size 16px
+						&:after
+							content '+'
+							margin-left 35px
+				&__price
+					font-size 55px 
+					+below(1800px)
+						font-size 35px
+					+below(1600px)
+						font-size 28px
+					+below(1450px)
+						font-size 20px
+					span 
+						margin-left .2em 
+				&__c-g
+					display flex
+					border-top 1px solid #808080
+					border-bottom 1px solid #808080
+					font-size 22px 
+					+below(1600px)
+						font-size 16px
+					.icon
+						height 50px
+						width 50px
+						+below(1350px)
+							width 30px
+							height 30px
+				&__count
+					display flex
+					justify-content space-around
+					align-items center
+					width 34.9%
+					border-right 1px solid #808080
+					padding 15px 0
+				&__guarantee
+					display flex
+					width 65%
+					justify-content space-around
+					align-items center
+					padding 15px 0
+				&__info-text
+					padding-top 40px
+					padding-left 10px
+					padding-right 10px
+					font-size 15px 
+					color #808080
+					
