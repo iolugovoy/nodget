@@ -3580,10 +3580,13 @@ button {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 0;
+  display: none;
 }
 
 .header__submenu-list .header__menu-link {
   padding-top: 0;
+  margin-left: -100px;
+  margin-right: -100px;
 }
 
 .header__menu-item {
@@ -3612,9 +3615,10 @@ button {
   opacity: 0.5;
 }
 
-.header__menu-item:hover >ul,
-.header__menu-item:focus >ul {
+.header__menu-item:hover >.header__submenu-list,
+.header__menu-item:focus >.header__submenu-list {
   opacity: 1;
+  display: block;
 }
 
 .header__menu-link {
