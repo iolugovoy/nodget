@@ -3146,6 +3146,22 @@ button {
   line-height: 1.2;
 }
 
+section {
+  background-size: cover;
+}
+
+@-ms-viewport {
+  max-width: 1920px;
+}
+
+@-o-viewport {
+  max-width: 1920px;
+}
+
+@viewport {
+  max-width: 1920px;
+}
+
 .breadcrumbs {
   font-size: 14px;
   color: #8c8c8c;
@@ -3335,6 +3351,40 @@ button {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
   -ms-transform: translate(-50%, -50%) rotate(-45deg);
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal p {
+  margin-bottom: 0.6em;
+}
+
+.modal textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 0 20px 20px 0;
+}
+
+.modal h1,
+.modal h2,
+.modal h3,
+.modal h4,
+.modal h5 {
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+
+.modal .toggle-btns {
+  margin-bottom: 3em;
+}
+
+.modal .toggle-btns .toggle-btn {
+  text-transform: uppercase;
+  fotn-size: 2em;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent;
+}
+
+.modal .toggle-btns .toggle-btn.active-toggler {
+  border-bottom: 2px solid #ce1a22;
 }
 
 .modal .form__container {
@@ -4391,6 +4441,17 @@ button {
 
 .connect__mailing {
   width: 45%;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .connect__mailing form {
@@ -4851,13 +4912,43 @@ button {
 }
 
 .specifications ul li .spec__name {
-  width: 43%;
+  width: 47%;
   padding-right: 20px;
   text-align: right;
 }
 
 .specifications ul li .spec__value {
-  widht: 57%;
+  widht: 52%;
+}
+
+.form__row {
+  margin-bottom: 1em;
+}
+
+.form__row a {
+  text-decoration: underline;
+}
+
+.form__input-title {
+  margin-bottom: 0.1em;
+}
+
+.form input {
+  margin-top: 0.3em;
+  border-radius: 0 15px 15px 0;
+  border: 1px solid #fff;
+  font-size: 25px;
+  width: 300px;
+}
+
+.form button.red-btn {
+  font-size: 1em;
+  color: #fff;
+  text-transform: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 13px;
+  margin-top: 30px;
 }
 
 .footer {
@@ -5475,7 +5566,7 @@ button {
   h1,
   .title {
     margin-top: 0.3em;
-    font-size: 36px;
+    font-size: 32px;
   }
 
   h2 {
@@ -5798,7 +5889,7 @@ button {
   h1,
   .title {
     margin-top: 0.2em;
-    font-size: 48px;
+    font-size: 36px;
   }
 
   h2 {
@@ -6428,7 +6519,7 @@ button {
 
   h1,
   .title {
-    font-size: 64px;
+    font-size: 40px;
   }
 
   h2 {

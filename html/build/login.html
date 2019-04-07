@@ -1,0 +1,51 @@
+<div class="toggle-btns">
+    <a class="toggle-btn" href="login-form">Вход</a>
+    <a class="toggle-btn" href="reg-form">Регистрация</a>
+</div>
+
+<div class="toggle-target" data-id="login-form">
+    <form class="form" action="/html/blocks/modal.html" method="post" enctype="application/x-www-form-urlencoded" data-ajax>
+        <div class="form__container">
+            <div class="form__title title">Войти</div>
+            <div class="form__row">
+                <div class="form__input-title required">Email:</div>
+                <input type="email" name="Email">
+            </div>
+            <div class="form__row">
+                <div class="form__input-title required">Пароль</div>
+                <input type="password"  name="Password">
+            </div>
+            <div class="form__row">
+                <button class="button red-btn" type="submit">Отправить</button>
+            </div>
+        </div>
+    </form> 
+</div>
+
+
+<div class="toggle-target" data-id="reg-form">
+    <form class="form" action="/html/blocks/modal.html" method="post" enctype="application/x-www-form-urlencoded" data-ajax>
+        <div class="form__container">
+            <div class="form__title title">Зарегистироваться</div>
+            <div class="form__row">
+                <div class="form__input-title required">Email:</div>
+                <input type="email" name="Email">
+            </div>
+            <div class="form__row">
+                <div class="form__input-title required">Пароль:</div>
+                <input type="password"  name="Password">
+            </div>
+            <div class="form__row">
+                <div class="form__input-title required">Имя:</div>
+                <input type="text"  name="Name">
+            </div>
+            <div class="form__row">
+                <button class="button red-btn" type="submit">Отправить</button>
+            </div>
+        </div>
+    </form> 
+</div>
+
+<script>
+    Tabs($('.toggle-btn'), $('.toggle-target'), 'active-toggler');
+</script>
