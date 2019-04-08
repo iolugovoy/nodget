@@ -4,8 +4,7 @@
     <meta charset="utf-8">
 <title>Nodget игровые компьютеры </title>
 <meta name="description" content="Главная страница сайта PhuketRentMix">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, max-width=1920">
 <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -17,8 +16,8 @@
 
 <link rel="stylesheet" href="/assets/build/global.css">
 
-    <!--link rel="preload" href="/assets/build/index.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
-    <noscript><link rel="stylesheet" href="/assets/build/index.css"></noscript-->
+    <link rel="preload" href="/assets/build/index.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+    <noscript><link rel="stylesheet" href="/assets/build/index.css"></noscript>
 </head>
 <body>
     <div class="body">
@@ -60,11 +59,13 @@
 	</div>
 	<div class="header__ctrl">
 		<div class="header__login">
-			<a href="">Войти в аккаунт</a>
+			<a href="login.html" data-ajax>Войти в аккаунт</a>
 		</div>
-		<a href="korzina.html" class="header__cart">
+		<a href="/cart.html" data-ajax class="header__cart">
 			0
-			<span class="header__cart-price">34 799 Р</span>
+			<span class="header__cart-price">
+				34 799 <span class="rubl">Р</span> 
+			</span>
 		</a>
 		<div class="header__search">
 			<form action="search">
@@ -78,7 +79,7 @@
 	</div>
 </header>
 
-        <div class="main"> 
+        <div class="body__content"> 
         <section class="top">
     <div class="top__bgs">
         <div class="top__bg current" style="background-image: url(/assets/images/first-2.jpg)"></div>
@@ -128,8 +129,8 @@
                         <div class="slide__big-name">Nodget</div>
                         <div class="slide__name">Manta</div>
                         <div class="slide__description">компактный корпус. безграничные возможности</div>
-                        <div class="slide__price">92 990 Р</div>
-                        <div class="slide__btn buy-btn">Купить</div>
+                        <div class="slide__price">92 990 <span class="rubl">Р</span></div>
+                        <div class="slide__btn red-btn">Купить</div>
                     </div>
                     <div class="slide__pic">
                         <img src="/assets/images/manta.png" alt="Manta Nodget">
@@ -142,8 +143,8 @@
                         <div class="slide__big-name">Nodget</div>
                         <div class="slide__name">Manta</div>
                         <div class="slide__description">компактный корпус. безграничные возможности</div>
-                        <div class="slide__price">92 990 Р</div>
-                        <div class="slide__btn buy-btn">Купить</div>
+                        <div class="slide__price">92 990 <span class="rubl">Р</span></div>
+                        <div class="slide__btn red-btn">Купить</div>
                     </div>
                     <div class="slide__pic">
                         <img src="/assets/images/manta.png" alt="Manta Nodget">
@@ -156,8 +157,8 @@
                         <div class="slide__big-name">Nodget</div>
                         <div class="slide__name">Manta</div>
                         <div class="slide__description">компактный корпус. безграничные возможности</div>
-                        <div class="slide__price">92 990 Р</div>
-                        <div class="slide__btn buy-btn">Купить</div>
+                        <div class="slide__price">92 990 <span class="rubl">Р</span></div>
+                        <div class="slide__btn red-btn">Купить</div>
                     </div>
                     <div class="slide__pic">
                         <img src="/assets/images/manta.png" alt="Manta Nodget">
@@ -181,7 +182,7 @@
                 <a href="tel:+79008435343">8(900)843-53-43</a>
             </div>
             <div class="top__callback-link">
-                <a href="">Перезвоните мне</a>
+                <a href="/callback.html" data-ajax>Перезвоните мне</a>
             </div>
         </div>
         <div class="top__scroll scroll">
@@ -281,7 +282,7 @@
                     Подтвердите пароль
                     <input type="password" name="password_confirm">
                 </label>
-                <button type="submit" class="buy-btn">Зарегестрировать аккаунт</button>
+                <button type="submit" class="red-btn">Зарегестрировать аккаунт</button>
             </form>
         </div>
     </div>
@@ -394,6 +395,9 @@
 </div>
 
 <div class="global-overlay"></div>
+
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/vendor/jquery.3.2.1.min.js"><\/script>')</script>
