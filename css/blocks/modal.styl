@@ -1,0 +1,44 @@
+.modal
+    width 100%
+    max-width 680px
+    display inline-block
+    background-color $bgcolor
+    overflow hidden
+    position relative
+    cursor default
+    vertical-align middle
+    white-space normal
+    text-align left
+    margin-y 50px
+    box-shadow 0px 0px 20px -5px rgba(#fff, 0.5)
+    padding 30px 
+    padding-top 60px
+    border-radius 20px 0 20px 0
+    &_wide
+        +above(sm)
+            max-width 1160px
+    &__close
+        z-index 100
+        cross 2px #c4c4c4 25px 25px 25px 25px
+        position absolute
+        right 35px
+        top 60px
+        cursor pointer
+    p 
+        margin-bottom .6em
+    textarea
+        width 100%
+        resize none
+        border-radius 0 20px 20px 0
+    h1, h2, h3, h4, h5
+        margin-top 1em
+        margin-bottom .2em
+    .toggle-btns
+        margin-bottom 3em        
+        .toggle-btn
+            text-transform uppercase 
+            fotn-size 2em
+            padding 10px 20px
+            border-bottom 2px solid transparent
+            &.active-toggler
+                border-bottom 2px solid #ce1a22
