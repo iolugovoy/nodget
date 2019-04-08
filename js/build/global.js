@@ -25,7 +25,6 @@
 @import './js/includes/pagination.js';
 @import './js/includes/popover.js';
 @import './js/includes/scrollEmitter.js';
-@import './js/includes/table.js';
 @import './js/includes/tabs.js';
 @import './js/includes/toggle.js';
 @import './js/includes/global-overlay.js';
