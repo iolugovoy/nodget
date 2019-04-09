@@ -69,7 +69,6 @@ app.on('init', () => {
         e.preventDefault();
         let $this = $(e.currentTarget);
         modal.setModifier($this.data('modal-modifier'));
-        loader.show();
         $.ajax({
             type: $this.attr('method'),
             dataType: 'html',
@@ -77,9 +76,6 @@ app.on('init', () => {
             data: $this.data('post') ? $this.data('post') : {},
             success: resp => {
                 modal.open(resp);
-            },
-            complete() {
-                loader.hide();
             }
         });
     });

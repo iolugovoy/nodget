@@ -44,7 +44,6 @@ let app = (function($) {
             e.preventDefault();
             let $this = $(e.currentTarget);
             let values = new FormData(e.currentTarget);
-            loader.show();
             $this.find('button, input[type="submit"]').attr('disabled', true).prop('disabled', true);
             $.ajax({
                 type: $this.attr('method'),
@@ -63,9 +62,6 @@ let app = (function($) {
                         $this.closest('[data-id="replace-on-submit"]').html($resp);
                     }
                     app.emit('ajaxFormSubmit', $resp);
-                },
-                complete: () => {
-                    loader.hide();
                 },
             });
         });

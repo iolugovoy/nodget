@@ -1,0 +1,109 @@
+.category.top.cart-page
+	height auto
+	.preview
+		margin-right 0
+		font-family 'Muller'
+
+
+.cart-page
+	background-image url('/assets/images/pattern.jpg')
+
+	.form
+		&__container
+			display flex 
+			flex-direction column
+			width 800px
+		.title 
+			font-size 55px 
+			text-transform uppercase	
+		.cart
+			&__header
+				text-transform uppercase
+				font-size 12px
+				display flex
+				justify-content space-around
+				padding 20px 0
+			&__title.summ
+				margin-right 105px
+			&__body
+				display flex
+				flex-direction column				
+			.item
+				border-top 1px solid #5f5f5f
+				display flex
+
+				&:last-child
+					border-bottom 1px solid #5f5f5f
+				&__pic
+					padding 5px
+					width 150px
+					img
+						height auto
+						width auto
+						max-width 100% 
+						max-height 100%	
+				&__info
+					padding-top 35px
+					padding-bottom 20px					
+				&__body
+					display flex
+					flex-direction column
+					justify-content space-between
+				&__name
+					font-size 36px
+					text-transform uppercase
+					
+				&__guarantee
+					font-size 22px
+					color #5f5f5f
+				.prices
+					display flex
+					border-top 1px solid #5f5f5f
+					font-size 22px
+					&__single, &__total
+						div
+							width 120px
+					&__single
+						padding 25px 60px 25px 0px
+						div
+							text-align left
+					&__total
+						padding 25px 0px 25px 60px
+						div
+							text-align right
+					&__count 
+						padding 25px
+						display flex
+						align-items center
+						border-left 1px solid #5f5f5f
+						border-right 1px solid #5f5f5f
+						button 
+							color white
+						&-number
+							margin 0 10px
+							background transparent
+							color white
+							width 40px
+							text-align center
+							border none
+			&__footer
+				display flex
+				align-items flex-start
+				padding-top 30px
+				padding-bottom 20px
+				justify-content space-between
+				font-size 12px
+				button 
+					color white
+					text-transform uppercase
+			&__summ-price
+				font-size 24px
+		&__actions
+			display flex 
+			align-items center 
+			justify-content	space-between
+			.black-btn, .red-btn
+				padding-top 10px 								
+				padding-bottom 10px								
+			.black-btn
+				font-size .7em

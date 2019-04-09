@@ -4749,6 +4749,7 @@ section {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-left: 21px;
 }
 
 .catalog .item__name {
@@ -4949,6 +4950,211 @@ section {
   font-weight: 400;
   padding: 13px;
   margin-top: 30px;
+}
+
+.category.top.cart-page {
+  height: auto;
+}
+
+.category.top.cart-page .preview {
+  margin-right: 0;
+  font-family: 'Muller';
+}
+
+.cart-page {
+  background-image: url("/assets/images/pattern.jpg");
+}
+
+.cart-page .form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 800px;
+}
+
+.cart-page .form .title {
+  font-size: 55px;
+  text-transform: uppercase;
+}
+
+.cart-page .form .cart__header {
+  text-transform: uppercase;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.cart-page .form .cart__title.summ {
+  margin-right: 105px;
+}
+
+.cart-page .form .cart__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.cart-page .form .cart .item {
+  border-top: 1px solid #5f5f5f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart-page .form .cart .item:last-child {
+  border-bottom: 1px solid #5f5f5f;
+}
+
+.cart-page .form .cart .item__pic {
+  padding: 5px;
+  width: 150px;
+}
+
+.cart-page .form .cart .item__pic img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cart-page .form .cart .item__info {
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+.cart-page .form .cart .item__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.cart-page .form .cart .item__name {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.cart-page .form .cart .item__guarantee {
+  font-size: 22px;
+  color: #5f5f5f;
+}
+
+.cart-page .form .cart .item .prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #5f5f5f;
+  font-size: 22px;
+}
+
+.cart-page .form .cart .item .prices__single div,
+.cart-page .form .cart .item .prices__total div {
+  width: 120px;
+}
+
+.cart-page .form .cart .item .prices__single {
+  padding: 25px 60px 25px 0px;
+}
+
+.cart-page .form .cart .item .prices__single div {
+  text-align: left;
+}
+
+.cart-page .form .cart .item .prices__total {
+  padding: 25px 0px 25px 60px;
+}
+
+.cart-page .form .cart .item .prices__total div {
+  text-align: right;
+}
+
+.cart-page .form .cart .item .prices__count {
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-left: 1px solid #5f5f5f;
+  border-right: 1px solid #5f5f5f;
+}
+
+.cart-page .form .cart .item .prices__count button {
+  color: #fff;
+}
+
+.cart-page .form .cart .item .prices__count-number {
+  margin: 0 10px;
+  background: transparent;
+  color: #fff;
+  width: 40px;
+  text-align: center;
+  border: none;
+}
+
+.cart-page .form .cart__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.cart-page .form .cart__footer button {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.cart-page .form .cart__summ-price {
+  font-size: 24px;
+}
+
+.cart-page .form__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.cart-page .form__actions .black-btn,
+.cart-page .form__actions .red-btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cart-page .form__actions .black-btn {
+  font-size: 0.7em;
 }
 
 .footer {
