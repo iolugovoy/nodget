@@ -9,9 +9,15 @@
 	left 0
 	right 0
 	top 0
+	+below(1200px)
+		position static
+		height 0
+		padding-top 0
 	&__left
 		display flex
 		align-items flex-start
+		+below(1200px)
+			margin-top 50px
 	&__logo
 		img
 			height 65px
@@ -22,10 +28,21 @@
 		margin-left 80px
 		+below(1400px)
 			margin-left 40px
+		+below(1200px)
+			position fixed
+			left 0
+			right 0
+			top 0
+			display flex
+			justify-content center
+			margin-left 0
+			overflow-x scroll
 	&__menu-list
 		list-style-type none
 		display flex
 		align-items flex-start		
+		+below(1200px)
+			flex-shrink 0
 	&__submenu-list
 		list-style-type none
 		transition all .2s ease-in-out
@@ -51,12 +68,19 @@
 			background-color black
 			border-radius 15px
 			transition all .2s ease-in-out
-		&:hover, &:focus
+		&:hover
 			&:before
 				opacity .5
 			>.header__submenu-list
 				opacity 1
 				display block
+		button:focus
+			~.header__submenu-list
+				opacity 1
+				display block
+			
+			
+		
 	&__menu-link
 		font-size 12px
 		color #fff
@@ -68,10 +92,12 @@
 		display block
 		+below(1400px)
 			font-size 10px
-		&:hover, &:focus
+		&:hover:not(button), &:focus:not(button)
 			color #ce1a22
 		&.active
 			font-weight 700
+	button.header__menu-link
+		cursor default
 	&__login
 		font-size 12px
 		color #fff
@@ -87,6 +113,8 @@
 	&__ctrl
 		display flex
 		align-items center
+		+below(1200px)
+			margin-top 50px
 	&__cart
 		width 50px
 		height 50px
@@ -99,6 +127,7 @@
 		position relative
 		transition box-shadow .2s ease-in-out
 		box-shadow 0px 0px 0px 0px #ce1a22
+		line-height 1
 		+below(1400px)
 			width 35px
 			height 35px

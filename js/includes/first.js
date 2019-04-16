@@ -4,7 +4,7 @@ app.on('init', () => {
 		owlCarouselFacade($this.find('.slider__list'), {
 			center: true,
 			items: 1,
-			start: 1
+			start: 1,
 		}, ['xs', 'sm', 'md', 'lg', 'xl', 'ml'], $this.find('.owl-arrows__prev'), $this.find('.owl-arrows__next'));
 		
 		$this.find('.slider__list').on('changed.owl.carousel', function(event) {
@@ -25,12 +25,24 @@ app.on('init', () => {
 		})
 	}
 
-	let $scrolbutton = $('.top__scroll')
+	let $scrolbutton = $('.top__scroll');
 	if($scrolbutton.length) {
 		let ScreenHeight = window.innerHeight;
 
 		$scrolbutton.click(function(){
 			scrollTop(ScreenHeight, true);
 		})
+	}
+
+	let $slidenums = $('.slide__num');
+	console.log($slidenums, $slidenums.length);
+	if($slidenums.length){
+		let num = 0;
+		for(let i = 0; i < $slidenums.length; i++){	
+			num = i + 1;
+			let text = '0' + num + '.';
+			$slidenums.eq(i).text(text);
+			console.log($slidenums.eq(i));
+		}
 	}
 });	

@@ -29,6 +29,7 @@
 		display flex
 		align-items center
 		justify-content center
+		flex-grow 10
 	
 	.social
 		position absolute
@@ -63,22 +64,26 @@
 				+below(1300px)
 					width 40%
 				>*
-					margin-bottom 12px
 					line-height 1em
+					margin-bottom .2em
 			&__num
 				font-size 20px 
+				margin-bottom 1.5em
 				+below(1300px)
 					font-size 16px 
 			&__type
 				font-size 20px 
+				margin-bottom .5em
 				+below(1300px)
 					font-size 16px 
 			&__big-name
 				font-size 110px
-				+below(1300pxpx)
+				margin-bottom .1em
+				+below(1300px)
 					font-size 80px
 			&__name
 				font-size 55px
+				
 				+below(1300px)
 					font-size 40px
 			&__description
@@ -87,6 +92,7 @@
 					font-size 16px
 			&__price
 				font-size 60px
+				margin-bottom .6em
 				+below(1300px)
 					font-size 45px
 			&__btn

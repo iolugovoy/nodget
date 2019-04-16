@@ -19,7 +19,10 @@
 		&__list
 			list-style-type none
 			width 1000px
+			counter-reset n-counter
 		.slide
+			counter-increment n-counter 
+				
 			a
 				text-align center
 				display flex
@@ -42,6 +45,9 @@
 					full-fill()
 					background-color #ce1a22					
 					z-index -1
+			&__text
+				&:before
+					content counter(n-counter)
 			&__pic
 				margin-bottom 40px
 				height 280px
@@ -49,6 +55,7 @@
 				align-items center
 				img
 					height auto
+					width auto
 					max-height 320px
 					max-width 250px
 					
