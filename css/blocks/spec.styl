@@ -3,18 +3,27 @@
 	display flex 
 	align-items center
 	flex-direction column
+	+below(600px)
+		padding-left 15px
+		padding-right 15px 
 	.icon-gear
 		width 150px
 		height 150px
 		margin-bottom 20px 
 	&__title
 		font-size 30px
+		+below(800px)
+			font-size 24px 
+			text-align center
 	ul
 		width 800px
 		list-style-type none
 		color #808080
 		margin-top 80px 
 		margin-bottom 80px
+		+below(1000px)
+			width auto
+			margin-top 30px
 		li
 			display flex
 			margin-bottom 20px

@@ -15,6 +15,8 @@
 		align-items center
 		padding-top 150px
 		min-height 900px
+		+below(1000px)
+			min-height 600px
 		&__social
 			+below(1200px)
 				display none 
@@ -40,7 +42,11 @@
 						content '>'
 			.item
 				display flex
-				justify-conent space-between
+				justify-content space-between
+				align-items flex-start
+				+below(650px)
+					flex-direction column
+					align-items stretch
 				&__title
 					font-size 50px
 					font-weight 300
@@ -49,17 +55,29 @@
 						font-size 40px
 					+below(1450px)
 						font-size 35px
+					+below(1000px)						
+						font-size 30px
+					+below(800px)
+						font-size 26px
 				&__pic
 					width 45%
 					position relative
+					+below(650px)
+						width 100%
 					.owl-arrows__prev
 						position absolute
 						left -30px
 						top 55%
+						z-index 10
+						+below(650px)
+							left 0
 					.owl-arrows__next
 						position absolute
 						right -30px
 						top 55%
+						z-index 10
+						+below(650px)
+							right 0 
 				&__delimeter
 					height 65%
 					width 2px
@@ -69,6 +87,12 @@
 					align-self flex-start
 					margin-top 15px
 					flex-shrink 0
+					+below(1000px)
+						margin-left 25px
+						margin-right 25px
+					+below(800px)
+						margin-left 15px
+						margin-right 15px
 				.slider
 					width 520px
 					+below(1850px)
@@ -79,6 +103,18 @@
 						width 390px
 					+below(1350px)
 						width 350px
+					+below(1000px)
+						width 300px
+					+below(900px)
+						width 270px
+					+below(800px)
+						width 250px
+					+below(700px)
+						width 220px
+					+below(650px)
+						width 280px
+						margin-left auto
+						margin-right auto
 					.slide
 						padding 25px
 						height 430px
@@ -101,6 +137,8 @@
 					color #808080
 					+below(1600px)
 						font-size 12px
+					+below(800px)
+						font-size 10px
 				&__action 
 					cursor pointer
 					transition color .2s ease-in-out
@@ -121,6 +159,8 @@
 					justify-content space-between
 					padding-left 20px 
 					align-items center
+					+below(800px)
+						padding-left 0
 					&-btn
 						font-size 23px
 						padding-top 10px

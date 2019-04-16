@@ -4,6 +4,11 @@
 	align-items center
 	text-align center
 	flex-direction column
+	+below(1000px)
+		padding 50px
+	+below(600px)
+		padding-left 15px
+		padding-right 15px 
 	p
 		width 70%
 		margin-bottom 2em
@@ -11,4 +16,8 @@
 		font-size 30px
 		+below(1450px)
 			font-size 24px
+		+below(800px)
+			font-size 18px
+		+below(650px)
+			width 100%
 		
