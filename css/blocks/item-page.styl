@@ -15,12 +15,19 @@
 		align-items center
 		padding-top 150px
 		min-height 900px
+		&__social
+			+below(1200px)
+				display none 
 		&__bottom
 			align-self stretch
+			.scroll 
+				+below(1200px)
+					display none
 		&__mid
 			width 68%
 			flex-direction column
-			
+			+below(1200px)
+				width 100%
 			.breadcrumbs
 				color #808080
 				font-size 14px 
@@ -42,7 +49,6 @@
 						font-size 40px
 					+below(1450px)
 						font-size 35px
-						
 				&__pic
 					width 45%
 					position relative
@@ -81,6 +87,8 @@
 							max-width 100%
 							height auto 
 							width auto
+						+below(1000px)
+							height auto
 				&__actions
 					display flex
 					widht 100%

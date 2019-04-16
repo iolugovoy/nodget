@@ -11,6 +11,11 @@
 	background-repeat repeat-y
 	overflow hidden
 	position relative
+	+below(600px)
+		padding-right 15px
+		padding-left 15px
+		padding-top 40px
+		padding-bottom 40px
 	&:before, &:after
 		content ''
 		position absolute
@@ -49,13 +54,21 @@
 			height 255px
 			width 250px
 			text-align center
+			+below(1400px)
+				height 210px
+			+below(1200px)
+				width 220px
+			+below(1000px)
+				height 180px
+			+below(800px)
+				width 170px
+			+below(450px)
+				width 120px
 			img
 				height auto
 				width auto
 				max-width 100% 
 				max-height 100%
-			+below(1400px)
-				height 210px
 		&__info
 			display flex
 			flex-direction column
@@ -64,10 +77,16 @@
 			font-size 22px
 			color #ce1a22
 			text-transform uppercase	
+			+below(450px)
+				font-size 18px
 		&__price 
 			font-size 55px
 			+below(1400px)
 				font-size 40px
+			+below(800px)
+				font-size 36px
+			+below(450px)
+				font-size 22px
 		&__description
 			font-size 14px
 			width 575px
@@ -75,6 +94,10 @@
 			color #808080
 			+below(1400px)
 				width 400px
+			+below(1000px)
+				width 250px
+			+below(800px)
+				display none
 		&__count
 			display flex
 			align-items center
@@ -82,30 +105,63 @@
 			justify-content center
 			border-left 1px solid #808080
 			border-right 1px solid #808080
+			+below(1200px)
+				width 150px
+			+below(1000px)
+				font-size 12px
+			+below(600px)
+				width auto
+				padding-left 10px
+				padding-right 10px
+				border-bottom 1px solid #808080
+				margin-bottom -1px
 		&__count-pic
 			margin-right 20px 
 			.icon
 				height 50px
 				width 50px
+				+below(1000px)
+					width 30px
+					height 30px
 		&__page
 			width 155px 
 			display flex
 			align-items center
 			justify-content center
+			+below(1200px)
+				width 100px
+			+below(1000px)
+				font-size 12px
+			+below(600px)
+				width auto
+				padding-left 10px
+				padding-right 10px
+				border-bottom 1px solid #808080
+				margin-bottom -1px
 		&__more
 			min-height 105px
 			display flex	
 			align-items stretch
 			border-top 1px solid #808080
+			+below(600px)
+				min-height 40px
 			>*
 				padding-top 24px
 				padding-bottom 24px
+				+below(1000px)
+					padding-top 8px
+					padding-bottom 8px
 				
 		&__buy
 			display flex
 			justify-content space-between
 			padding-top 30px
 			padding-bottom 30px
+			+below(1000px)
+				padding 0
+			+below(800px)
+				flex-wrap wrap
+				padding-bottom 10px
 			.red-btn
 				padding-top 12px
 				padding-bottom 12px 
@@ -118,3 +174,7 @@
 		font-size 17px 
 		font-family 'HelveticaNeue'
 		margin-top 50px
+		+below(1000px)
+			font-size 15px
+		+below(600px)
+			font-size 12px
