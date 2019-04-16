@@ -6,12 +6,17 @@
 	font-family 'HelveticaNeue'
 	box-shadow 0px 6px 21px 9px rgba(0,0,0,1)
 	position relative
+	+below(600px)
+		padding 15px
+		padding-top 60px
 	&__nav
 		display flex
 		flex-direction row
 		padding-right 15%
 		justify-content space-between
 		margin-bottom 100px
+		+below(1000px)
+			flex-wrap wrap
 	.menu
 		display flex
 		flex-direction column
@@ -20,15 +25,23 @@
 			list-style-type none
 			opacity .7
 			font-weight 400
+			+below(1000px)
+				margin-right 20px
+				margin-bottom 40px
 		&__title
 			font-weight 600
 			margin-bottom 1em
 	&__copyright 
 		full-centered()
 		position relative
+		+below(700px)
+			flex-direction column
 	&__logo
 		position absolute
 		bottom 0
 		right 0
+		+below(700px)
+			position static
+			margin-top 30px
 		img
 			height 64px

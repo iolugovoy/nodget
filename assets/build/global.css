@@ -3645,6 +3645,7 @@ section {
   margin-right: 6px;
   position: relative;
   text-align: center;
+  white-space: nowrap;
 }
 
 .header__menu-item:before {
@@ -4975,6 +4976,9 @@ section {
   font-size: 14px;
   font-weight: 400;
   padding: 13px;
+}
+
+.form__actions {
   margin-top: 30px;
 }
 
@@ -7470,6 +7474,8 @@ section {
     justify-content: center;
     margin-left: 0;
     overflow-x: scroll;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0)), to(#000));
+    background: linear-gradient(to top, rgba(0,0,0,0), #000);
   }
 
   .header__menu-list {
@@ -7478,7 +7484,28 @@ section {
   }
 
   .header__ctrl {
-    margin-top: 50px;
+    margin-top: 58px;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .header__menu {
+    display: block;
+  }
+
+  .header__submenu-list .header__menu-link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer__nav {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .footer .menu__list {
+    margin-right: 20px;
+    margin-bottom: 40px;
   }
 }
 
@@ -7493,6 +7520,20 @@ section {
 
   .fancybox-thumbs > ul > li {
     max-width: calc(100% - 10px);
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  .footer__copyright {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer__logo {
+    position: static;
+    margin-top: 30px;
   }
 }
 
@@ -7534,6 +7575,31 @@ section {
 
   .h-xs {
     display: none !important;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .header__login {
+    padding-right: 0;
+    border-right: 0;
+    width: 100%;
+    margin-right: 0;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  .header__ctrl {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 50px;
+  }
+
+  .footer {
+    padding: 15px;
+    padding-top: 60px;
   }
 }
 
@@ -7708,6 +7774,10 @@ section {
 }
 
 @media only screen {
+  html.scroll-locked .header {
+    margin-right: 0;
+  }
+
   .top .slider .slide__pic {
     margin-left: 30px;
   }
