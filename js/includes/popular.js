@@ -9,7 +9,7 @@ app.on('init', () => {
 				800:{
 					items: 2
 				},
-				1100: {
+				1150: {
 					stagePadding: 20,
 					items: 3
 				}

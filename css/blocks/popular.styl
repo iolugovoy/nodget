@@ -4,9 +4,11 @@
 	align-items center
 	justify-content center
 	flex-direction column
-	min-height 800px
-	height 100vh
+	min-height 100vh
+	height auto
 	background-image url("/assets/images/popular.jpg")
+	+below(600px)
+		padding 15px 
 	h2
 		font-size 75px 
 		font-family Muller
@@ -14,12 +16,18 @@
 		text-transform uppercase
 		+below(1300px)
 			font-size 55px
+		+below(1000px)
+			font-size 40px
+		+below(600px)
+			font-size 30px
 	.slider
 		position relative
 		&__list
 			list-style-type none
 			width 1000px
 			counter-reset n-counter
+			+below(1150px)
+				width 90vw
 		.slide
 			counter-increment n-counter 
 				

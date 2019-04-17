@@ -40,7 +40,7 @@
 		top 50%
 		transform translateY(-50%)
 		z-index 10
-		+below(600px)
+		+below(800px)
 			display none
 		&__list
 			display flex
@@ -66,41 +66,62 @@
 			display flex
 			align-items center
 			justify-content center
+			+below(600px)
+				padding 10px 0
 			&__text 
 				+below(1300px)
 					width 40%
+				+below(600px)
+					width auto
+					max-width 45vw
 				>*
 					line-height 1em
 					margin-bottom .2em
+				
 			&__num
 				font-size 20px 
 				margin-bottom 1.5em
 				+below(1300px)
 					font-size 16px 
+				+below(450px)
+					font-size 12px 
 			&__type
 				font-size 20px 
 				margin-bottom .5em
 				+below(1300px)
 					font-size 16px 
+				+below(450px)	
+					font-size 12px 
 			&__big-name
 				font-size 110px
 				margin-bottom .1em
 				+below(1300px)
 					font-size 80px
+				+below(1000px)
+					font-size 60px
+				+below(700px)
+					font-size 45px
+				+below(450px)
+					font-size 26px 
 			&__name
 				font-size 55px
-				
 				+below(1300px)
 					font-size 40px
+				+below(450px)
+					font-size 22px 
 			&__description
 				font-size 20px
 				+below(1300px)
 					font-size 16px
+				+below(450px)
+					font-size 12px 
 			&__price
 				font-size 60px
 				margin-bottom .6em
 				+below(1300px)
 					font-size 45px
+				+below(450px)
+					font-size 30px 
 			&__btn
 				&:after
 					content '+'
@@ -108,13 +129,18 @@
 					font-size 1.3em
 			&__pic
 				margin-left 80px
-				+below(1400)
+				+below(1400px)
 					margin-left 30px
+				+below(600px)
+					width 35vw
 				img
 					height 550px
 					width auto
 					+below(1300px)
 						height 300px
+					+below(600px)
+						height auto
+						width 100%
 					
 		&__ctrls.owl-arrows
 			position absolute

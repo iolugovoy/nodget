@@ -3141,6 +3141,7 @@ button {
   font-family: 'PT Rouble Sans', sans-serif;
   font-weight: inherit;
   font-size: inherit;
+  line-height: 1em;
 }
 
 * {
@@ -4222,8 +4223,8 @@ section {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 800px;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background-image: url("/assets/images/popular.jpg");
 }
 
@@ -4354,8 +4355,8 @@ section {
 }
 
 .connect {
-  min-height: 900px;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background-image: url("/assets/images/reg.jpg");
   padding: 50px;
   display: -webkit-box;
@@ -7340,6 +7341,10 @@ section {
     height: 35px;
   }
 
+  .top .slider .slide__pic {
+    margin-left: 30px;
+  }
+
   .top .slider__ctrls.owl-arrows {
     right: 0;
   }
@@ -7496,6 +7501,10 @@ section {
     margin-top: 58px;
   }
 
+  .connect__mailing form input {
+    width: auto;
+  }
+
   .catalog .item__pic {
     width: 220px;
   }
@@ -7521,6 +7530,12 @@ section {
   }
 }
 
+@media only screen and (max-width: 1149px) {
+  .popular .slider__list {
+    width: 90vw;
+  }
+}
+
 @media only screen and (max-width: 999px) {
   .header__menu {
     display: block;
@@ -7529,6 +7544,22 @@ section {
   .header__submenu-list .header__menu-link {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .top .slider .slide__big-name {
+    font-size: 60px;
+  }
+
+  .popular h2 {
+    font-size: 40px;
+  }
+
+  .about .preview h1 {
+    font-size: 50px;
+  }
+
+  .contacts .preview h1 {
+    font-size: 50px;
   }
 
   .catalog .item__pic {
@@ -7615,6 +7646,24 @@ section {
   }
 }
 
+@media only screen and (max-width: 829px) {
+  .connect__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .connect__bottom .social {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  .connect__mailing {
+    width: 100%;
+  }
+}
+
 @media all and (max-width: 800px) {
   .fancybox-thumbs {
     width: 110px;
@@ -7630,6 +7679,21 @@ section {
 }
 
 @media only screen and (max-width: 799px) {
+  .top .social {
+    display: none;
+  }
+
+  .red-btn {
+    -webkit-box-shadow: 0px 0px 5px 2px #ce1a22;
+    box-shadow: 0px 0px 5px 2px #ce1a22;
+  }
+
+  .red-btn:hover,
+  .red-btn:focus {
+    -webkit-box-shadow: 0px 19px 5px 2px #ce1a22;
+    box-shadow: 0px 19px 5px 2px #ce1a22;
+  }
+
   .category.top .preview {
     margin-right: 0;
   }
@@ -7684,6 +7748,10 @@ section {
 }
 
 @media only screen and (max-width: 699px) {
+  .top .slider .slide__big-name {
+    font-size: 45px;
+  }
+
   .footer__copyright {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -7805,15 +7873,62 @@ section {
     padding-left: 15px;
   }
 
-  .top .social {
-    display: none;
+  .top .slider .slide {
+    padding: 10px 0;
+  }
+
+  .top .slider .slide__text {
+    width: auto;
+    max-width: 45vw;
+  }
+
+  .top .slider .slide__pic {
+    width: 35vw;
+  }
+
+  .top .slider .slide__pic img {
+    height: auto;
+    width: 100%;
   }
 
   .top__bottom .scroll {
     display: none;
   }
 
+  .popular {
+    padding: 15px;
+  }
+
+  .popular h2 {
+    font-size: 30px;
+  }
+
+  .connect {
+    padding: 15px;
+  }
+
   .category.top .preview__big-name {
+    font-size: 40px;
+  }
+
+  .about .preview h1 {
+    font-size: 36px;
+  }
+
+  .about .preview p {
+    font-size: 12px;
+  }
+
+  .about .preview .red-btn {
+    font-size: 14px;
+  }
+
+  .category.top.about .top__mid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contacts .preview h1 {
     font-size: 40px;
   }
 
@@ -7865,6 +7980,50 @@ section {
 }
 
 @media only screen and (max-width: 449px) {
+  .top .slider .slide__num {
+    font-size: 12px;
+  }
+
+  .top .slider .slide__type {
+    font-size: 12px;
+  }
+
+  .top .slider .slide__big-name {
+    font-size: 26px;
+  }
+
+  .top .slider .slide__name {
+    font-size: 22px;
+  }
+
+  .top .slider .slide__description {
+    font-size: 12px;
+  }
+
+  .top .slider .slide__price {
+    font-size: 30px;
+  }
+
+  .connect__reg h2 {
+    font-size: 32px;
+  }
+
+  .connect__reg h3 {
+    font-size: 22px;
+  }
+
+  .connect__reg form label input {
+    width: auto;
+  }
+
+  .connect__bottom h3 {
+    font-size: 22px;
+  }
+
+  .connect__mailing form button {
+    padding: 10px;
+  }
+
   .catalog .item__pic {
     width: 120px;
   }
@@ -8051,10 +8210,6 @@ section {
 @media only screen {
   html.scroll-locked .header {
     margin-right: 0;
-  }
-
-  .top .slider .slide__pic {
-    margin-left: 30px;
   }
 
   .connect__reg h2 {
