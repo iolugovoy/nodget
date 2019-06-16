@@ -117,6 +117,21 @@
   font-style: normal;
 }
 
+.base-button {
+  text-decoration: none;
+  background: transparent;
+  color: #fff;
+  border-radius: 15px 0 15px 0;
+  padding: 10px 50px;
+  border: 1px solid #fff;
+  margin-left: 5px;
+}
+
+.base-button:hover {
+  color: #000;
+  background-color: #fff;
+}
+
 .icon.icon-arrow {
   width: 1.40625em;
   height: 0.25em;
@@ -2984,6 +2999,7 @@ body {
   flex: 1 1 auto;
   position: relative;
   z-index: 0;
+  overflow: hidden;
 }
 
 .global-overlay {
@@ -3315,8 +3331,8 @@ section {
   height: 25px;
   position: relative;
   position: absolute;
-  right: 35px;
-  top: 60px;
+  right: 25px;
+  top: 25px;
   cursor: pointer;
 }
 
@@ -4127,6 +4143,110 @@ section {
 
 .top__phone {
   letter-spacing: 0.2em;
+}
+
+.top__slider-wrapper {
+  text-align: center;
+}
+
+.top__title {
+  font-size: 72px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.top__sub {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.top-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.top-slider__slide {
+  position: relative;
+  width: 360px;
+  margin: 0 40px;
+}
+
+.top-slider__slide:hover {
+  color: #fff;
+}
+
+.top-slider__price {
+  font-size: 24px;
+  font-family: "Muller";
+  font-variant: small-caps;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.top-slider__price div {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: 70% -20%;
+  -ms-transform-origin: 70% -20%;
+  transform-origin: 70% -20%;
+}
+
+.top-slider__name {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.top-slider__info {
+  font-family: "Muller";
+  font-size: 22px;
+  font-variant: small-caps;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.top-slider__button {
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.top-slider__img {
+  height: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.top-slider__img img {
+  max-width: 100%;
 }
 
 @-webkit-keyframes scroll {
@@ -5304,11 +5424,14 @@ section {
 }
 
 .category.top.news.article {
-  background-size: contain;
+  background-size: cover;
 }
 
 .category.top.news.article .top__mid {
   padding-top: 10px;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
 }
 
 .category.top.news.article .top__share {
@@ -7323,6 +7446,47 @@ section {
   }
 }
 
+@media only screen and (max-width: 1439px) {
+  .top__title {
+    font-size: 46px;
+  }
+
+  .top__sub {
+    font-size: 24px;
+  }
+
+  .top-slider__slide {
+    width: 300px;
+    margin: 0 20px;
+  }
+
+  .top-slider__price {
+    height: 180px;
+    font-size: 18px;
+  }
+
+  .top-slider__name {
+    font-size: 20px;
+  }
+
+  .top-slider__info {
+    font-size: 16px;
+  }
+
+  .top-slider__button {
+    margin-top: 20px;
+  }
+
+  .top-slider__img {
+    height: 180px;
+    margin-bottom: 20px;
+  }
+
+  .top-slider__img img {
+    max-width: 150px;
+  }
+}
+
 @media only screen and (max-width: 1399px) {
   .header__menu {
     margin-left: 40px;
@@ -7605,6 +7769,18 @@ section {
     margin-top: 30px;
   }
 
+  .article .heading-p {
+    width: 80%;
+  }
+
+  .article-body h2 {
+    font-size: 40px;
+  }
+
+  .article-body p {
+    font-size: 18px;
+  }
+
   .footer__nav {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -7641,6 +7817,10 @@ section {
 }
 
 @media only screen and (max-width: 899px) {
+  .category.top.news .preview .news-item {
+    width: 46%;
+  }
+
   .item-page .top__mid .item .slider {
     width: 270px;
   }
@@ -7690,8 +7870,8 @@ section {
 
   .red-btn:hover,
   .red-btn:focus {
-    -webkit-box-shadow: 0px 19px 5px 2px #ce1a22;
-    box-shadow: 0px 19px 5px 2px #ce1a22;
+    -webkit-box-shadow: 0px 0px 6px 2px #ce1a22;
+    box-shadow: 0px 0px 6px 2px #ce1a22;
   }
 
   .category.top .preview {
@@ -7770,8 +7950,25 @@ section {
 }
 
 @media only screen and (max-width: 649px) {
+  .header__logo img {
+    height: 35px;
+  }
+
+  .top .slider .slide__btn:after {
+    margin-left: 0;
+  }
+
   .description p {
     width: 100%;
+  }
+
+  .category.top.news .preview .news-item {
+    width: 100%;
+  }
+
+  .article .heading-p {
+    width: 100%;
+    font-size: 18px;
   }
 
   .item-page .top__mid .item {
@@ -7845,6 +8042,11 @@ section {
 }
 
 @media only screen and (max-width: 599px) {
+  #msOrder input,
+  #msOrder textarea {
+    width: auto !important;
+  }
+
   .header {
     padding-right: 15px;
     padding-left: 15px;
@@ -7901,6 +8103,10 @@ section {
 
   .popular h2 {
     font-size: 30px;
+  }
+
+  .popular .slider .slide__name {
+    font-size: 24px;
   }
 
   .connect {
@@ -7973,6 +8179,34 @@ section {
     padding-right: 15px;
   }
 
+  .form input {
+    width: auto;
+  }
+
+  .cart-page .form .cart__header {
+    display: none;
+  }
+
+  .category.top.news .preview .title {
+    font-size: 32px;
+  }
+
+  .category.top.news .preview h4 {
+    font-size: 20px;
+  }
+
+  .article-body {
+    padding: 15px;
+  }
+
+  .article-body h2 {
+    font-size: 32px;
+  }
+
+  .article-body p {
+    font-size: 12px;
+  }
+
   .footer {
     padding: 15px;
     padding-top: 60px;
@@ -7980,6 +8214,10 @@ section {
 }
 
 @media only screen and (max-width: 449px) {
+  .modal .form .title {
+    font-size: 21px;
+  }
+
   .top .slider .slide__num {
     font-size: 12px;
   }
@@ -8034,6 +8272,12 @@ section {
 
   .catalog .item__price {
     font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .catalog .item__pic {
+    width: 85px;
   }
 }
 

@@ -127,6 +127,8 @@
 					content '+'
 					margin-left 30px
 					font-size 1.3em
+					+below(650px)
+						margin-left 0
 			&__pic
 				margin-left 80px
 				+below(1400px)
@@ -237,3 +239,114 @@
 		top: 3px
 	}
 }
+
+
+
+.top
+	&__slider-wrapper
+		text-align center
+
+	&__title
+		font-size: 72px;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 1;
+		margin-bottom: 16px;
+		
+		+below(1440px)
+			font-size: 46px
+		
+	&__sub
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 1;
+		
+		+below(1440px)
+			font-size: 24px
+		
+
+.top-slider
+	display: flex;
+	align-items: center;
+	margin-top: 20px
+	
+	&__slide
+		position relative
+		width: 360px
+		margin: 0 40px;
+		
+		&:hover
+			color: #fff
+			
+		+below(1440px)
+			width: 300px
+			margin: 0 20px
+
+	&__price
+		font-size: 24px;
+		font-family: "Muller";
+		font-variant: small-caps;
+		line-height: 1;
+		
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 250px;
+		display: flex;
+		align-items: flex-end
+		
+		+below(1440px)
+			height: 180px;
+			font-size: 18px
+		
+		div
+			transform: rotate(90deg);
+			transform-origin: 70% -20%;
+		
+	&__name
+		font-size: 36px;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 1;
+		margin-bottom: 5px
+		
+		+below(1440px)
+			font-size: 20px
+		
+	&__info
+		font-family: "Muller";
+		font-size: 22px;
+		font-variant: small-caps;
+		line-height: 1.2;
+		text-align: center;
+		
+		+below(1440px)
+			font-size: 16px
+
+	&__button 
+		margin-top: 30px;
+		display: inline-block;
+		
+		+below(1440px)
+			margin-top: 20px
+		
+	&__img 
+		height: 270px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		
+		margin-bottom: 26px
+		
+		+below(1440px)
+			height: 180px
+			margin-bottom: 20px
+		
+		img
+			max-width: 100%;
+			
+			+below(1440px)
+				max-width: 150px;
+			
+			

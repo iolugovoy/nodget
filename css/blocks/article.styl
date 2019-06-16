@@ -9,13 +9,19 @@
 		font-weight 600
 		font-size 26px
 		align-self flex-start
+		+below(1000px)
+			width 80%
+		+below(650px)
+			width 100%
+			font-size 18px
 	
 				
 
 .category.top.news.article 
-	background-size contain
+	background-size cover
 	.top__mid
 		padding-top 10px
+		justify-content center!important
 	.top__share
 		position initial
 		
@@ -23,11 +29,23 @@
 	background-image url('/assets/images/pattern.jpg')
 	background-size contain
 	padding 150px 20%
+	+below(600px)
+		padding 15px 
 	h2
 		font-size 60px
 		text-align center
+		+below(1000px)
+			font-size 40px
+		+below(600px)
+			font-size 32px
+					
 	p 
 		font-size 22px
 		font-weight regular
 		margin-bottom 1.3em
+		+below(1000px)
+			font-size 18px
+		+below(600px)
+			font-size 12px
+					
 		

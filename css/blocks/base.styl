@@ -37,6 +37,7 @@ body
 		flex 1 1 auto
 		position relative
 		z-index 0
+		overflow hidden
 		
 .global-overlay
 	position fixed
@@ -170,3 +171,8 @@ section
 @viewport {
 	max-width 1920px
 }
+
+
+#msOrder input, #msOrder textarea
+	+below(600px)
+		width auto!important
