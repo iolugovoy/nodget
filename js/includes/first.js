@@ -1,11 +1,17 @@
 app.on('init', () => {
-	let $this = $('.top__slider');
+	let $this = $('.top__slider-wrapper');
 	if ($this.length) {
-		owlCarouselFacade($this.find('.slider__list'), {
-			center: true,
-			items: 1,
-			start: 1,
-		}, ['xs', 'sm', 'md', 'lg', 'xl', 'ml'], $this.find('.owl-arrows__prev'), $this.find('.owl-arrows__next'));
+		owlCarouselFacade($this.find('.top-slider'), {
+			dots: true,
+			responsive: {
+				0: {
+					items: 1
+				},
+				800: {
+					items: 2
+				}
+			}
+		}, ['xs', 'sm'], $this.find('.owl-arrows__prev'), $this.find('.owl-arrows__next'));
 		
 		$this.find('.slider__list').on('changed.owl.carousel', function(event) {
 	    	$('.top__bg').removeClass('current');
@@ -34,15 +40,4 @@ app.on('init', () => {
 		})
 	}
 
-	let $slidenums = $('.slide__num');
-	console.log($slidenums, $slidenums.length);
-	if($slidenums.length){
-		let num = 0;
-		for(let i = 0; i < $slidenums.length; i++){	
-			num = i + 1;
-			let text = '0' + num + '.';
-			$slidenums.eq(i).text(text);
-			console.log($slidenums.eq(i));
-		}
-	}
 });	
