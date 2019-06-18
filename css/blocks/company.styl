@@ -1,0 +1,62 @@
+.company
+	position relative
+	min-height 100vh
+	padding 50px
+	padding-top 150px
+	+below(sm)
+		padding 15px
+		padding-y 50px
+	&:before
+		content ''
+		position absolute
+		top 0
+		bottom 0
+		left 0
+		right 0
+		z-index 0
+		height 100%
+		width 100%
+		background: linear-gradient(135deg, rgba(9,6,33,1) 0%,rgba(9,6,33,0) 78%,rgba(9,6,33,0) 100%),
+					linear-gradient(45deg, rgba(9,6,33,1) 0%,rgba(9,6,33,0) 78%,rgba(9,6,33,0) 100%);
+	> *
+		position relative
+		z-index 1
+	&-wrapper
+		display flex
+		flex-direction column
+		align-items: flex-start
+		width 50%
+		+below(md)
+			width 65%
+		+below(sm)
+			width 100%
+	h1 
+		font-family 'HelveticaNeue'
+		text-transform uppercase
+		set('font-size', 36px n 65px n 115px) 
+		font-weight 600
+		margin-top 0
+		margin-bottom .35em
+		+below(lg)
+			margin-bottom .5em
+	p
+		font-size 20px
+		line-height: 1.5
+		margin-bottom 2.3em
+		+below(lg)
+			margin-bottom 1.3em
+			font-size 18px
+		+below(sm)
+			font-size 16px
+			
+	strong
+		font-size 24px
+		margin-bottom: 2.3em
+		+below(lg)
+			margin-bottom 1.3em
+			
+	.red-btn
+		+below(sm)
+			margin auto
+		
+		

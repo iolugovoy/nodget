@@ -5514,6 +5514,65 @@ section {
   margin-bottom: 1.3em;
 }
 
+.company {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px;
+  padding-top: 150px;
+}
+
+.company:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #090621 0%, rgba(9,6,33,0) 78%, rgba(9,6,33,0) 100%), linear-gradient(45deg, #090621 0%, rgba(9,6,33,0) 78%, rgba(9,6,33,0) 100%);
+}
+
+.company > * {
+  position: relative;
+  z-index: 1;
+}
+
+.company-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.company h1 {
+  font-family: 'HelveticaNeue';
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.35em;
+}
+
+.company p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 2.3em;
+}
+
+.company strong {
+  font-size: 24px;
+  margin-bottom: 2.3em;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6485,6 +6544,10 @@ section {
   .breadcrumbs {
     font-size: 16px;
   }
+
+  .company h1 {
+    font-size: 65px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -7116,6 +7179,10 @@ section {
     margin-top: 25px;
     margin-bottom: 25px;
   }
+
+  .company h1 {
+    font-size: 115px;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -7471,6 +7538,19 @@ section {
 }
 
 @media only screen and (max-width: 1599px) {
+  .company h1 {
+    margin-bottom: 0.5em;
+  }
+
+  .company p {
+    margin-bottom: 1.3em;
+    font-size: 18px;
+  }
+
+  .company strong {
+    margin-bottom: 1.3em;
+  }
+
   .item-page .top__mid .item__title {
     font-size: 40px;
   }
@@ -7692,6 +7772,12 @@ section {
   }
 }
 
+@media only screen and (max-width: 1279px) {
+  .company-wrapper {
+    width: 65%;
+  }
+}
+
 @media only screen and (max-width: 1199px) {
   .header {
     position: static;
@@ -7881,6 +7967,26 @@ section {
 
   .item-page .top__mid .item .slider .slide {
     height: auto;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .company {
+    padding: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .company-wrapper {
+    width: 100%;
+  }
+
+  .company p {
+    font-size: 16px;
+  }
+
+  .company .red-btn {
+    margin: auto;
   }
 }
 
