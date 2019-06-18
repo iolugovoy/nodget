@@ -1,0 +1,68 @@
+.discount
+	position relative
+	min-height 100vh
+	padding 50px
+	display flex
+	align-items center
+	justify-content center
+	background-image url('/assets/images/pattern.jpg')
+	+below(sm)
+		min-height 500px
+	+below(xs)
+		padding 15px
+	&__slider-wrapper
+		width 73%
+		max-width 1400px
+		margin auto
+		+below(1200px)
+			width 90%
+		+below(640px)
+			width 100%
+			margin 0
+	.owl-arrows 
+		display none
+	.slide 
+		display flex
+		justify-content space-between
+		align-items center
+		&__text
+			width 65%
+			margin-right 20px
+			+below(sm)
+				width 100%
+		&__description
+			font-size 1.1em
+			line-height 1.6em
+			margin-bottom 2em
+			+below(xs)
+				font-size .8em
+		&__button.red-btn
+			text-transform none
+		&__item
+			display flex 
+			flex-direction column
+			align-items center
+			cursor pointer
+			.item-name
+				max-width 200px
+				text-align center
+				font-size 30px
+				+below(sm)
+					font-size 24px
+				+below(xs)
+					font-size 16px	
+			.item-image
+				width 370px
+				height auto
+				margin-top -30px
+				+below(sm)
+					width 200px
+					margin-top 0
+				+below(xs)
+					width 100px
+		&__title
+			set('font-size', 32px n 50px n 65px)
+			margin-bottom .7em
+			font-family 'Helvetica Neue'
+			font-weight 700
+		

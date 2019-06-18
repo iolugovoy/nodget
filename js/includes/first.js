@@ -1,4 +1,12 @@
 app.on('init', () => {
+	let $acsSlider = $('.top__slider');
+	if ($acsSlider.length) {
+		owlCarouselFacade($acsSlider.find('.slider__list'), {
+			center: true,
+			items: 1,
+			start: 1
+		}, ['xs', 'sm', 'md', 'lg', 'xl', 'ml'], $acsSlider.find('.owl-arrows__prev'), $acsSlider.find('.owl-arrows__next'));
+	};
 	let $this = $('.top__slider-wrapper');
 	if ($this.length) {
 		owlCarouselFacade($this.find('.top-slider'), {

@@ -4175,7 +4175,7 @@ section {
   line-height: 1;
 }
 
-.top .owl-arrows {
+.top .owl-arrows.main-page {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -4189,8 +4189,8 @@ section {
   justify-content: space-between;
 }
 
-.top .owl-arrows .owl-arrows__prev,
-.top .owl-arrows .owl-arrows__next {
+.top .owl-arrows.main-page .owl-arrows__prev,
+.top .owl-arrows.main-page .owl-arrows__next {
   z-index: 10;
 }
 
@@ -5573,6 +5573,92 @@ section {
   margin-bottom: 2.3em;
 }
 
+.discount {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-image: url("/assets/images/pattern.jpg");
+}
+
+.discount__slider-wrapper {
+  width: 73%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.discount .owl-arrows {
+  display: none;
+}
+
+.discount .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.discount .slide__text {
+  width: 65%;
+  margin-right: 20px;
+}
+
+.discount .slide__description {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  margin-bottom: 2em;
+}
+
+.discount .slide__button.red-btn {
+  text-transform: none;
+}
+
+.discount .slide__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.discount .slide__item .item-name {
+  max-width: 200px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.discount .slide__item .item-image {
+  width: 370px;
+  height: auto;
+  margin-top: -30px;
+}
+
+.discount .slide__title {
+  font-size: 32px;
+  margin-bottom: 0.7em;
+  font-family: 'Helvetica Neue';
+  font-weight: 700;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6221,8 +6307,8 @@ section {
     max-width: 1160px;
   }
 
-  .top .owl-arrows .owl-arrows__prev,
-  .top .owl-arrows .owl-arrows__next {
+  .top .owl-arrows.main-page .owl-arrows__prev,
+  .top .owl-arrows.main-page .owl-arrows__next {
     margin: 40px;
   }
 }
@@ -6547,6 +6633,10 @@ section {
 
   .company h1 {
     font-size: 65px;
+  }
+
+  .discount .slide__title {
+    font-size: 50px;
   }
 }
 
@@ -7182,6 +7272,10 @@ section {
 
   .company h1 {
     font-size: 115px;
+  }
+
+  .discount .slide__title {
+    font-size: 65px;
   }
 }
 
@@ -7831,6 +7925,10 @@ section {
     width: 100px;
   }
 
+  .discount__slider-wrapper {
+    width: 90%;
+  }
+
   .item-page .top__social {
     display: none;
   }
@@ -7972,21 +8070,29 @@ section {
 
 @media only screen and (max-width: 959px) {
   .company {
-    padding: 15px;
+    min-height: 500px;
     padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .company-wrapper {
-    width: 100%;
   }
 
   .company p {
     font-size: 16px;
   }
 
-  .company .red-btn {
-    margin: auto;
+  .discount {
+    min-height: 500px;
+  }
+
+  .discount .slide__text {
+    width: 100%;
+  }
+
+  .discount .slide__item .item-name {
+    font-size: 24px;
+  }
+
+  .discount .slide__item .item-image {
+    width: 200px;
+    margin-top: 0;
   }
 }
 
@@ -8220,6 +8326,45 @@ section {
 
   .h-xs {
     display: none !important;
+  }
+
+  .top__title {
+    font-size: 32px;
+  }
+
+  .company {
+    padding: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .company-wrapper {
+    width: 100%;
+  }
+
+  .company .red-btn {
+    margin: auto;
+  }
+
+  .discount {
+    padding: 15px;
+  }
+
+  .discount__slider-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .discount .slide__description {
+    font-size: 0.8em;
+  }
+
+  .discount .slide__item .item-name {
+    font-size: 16px;
+  }
+
+  .discount .slide__item .item-image {
+    width: 100px;
   }
 }
 
