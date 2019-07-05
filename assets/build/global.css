@@ -3830,7 +3830,7 @@ section {
 .top {
   min-height: 100vh;
   height: auto;
-  background-image: url("/assets/images/first.jpg");
+  background-image: url("/assets/images/pattern.jpg");
   background-size: cover;
   background-position: center center;
   padding: 50px;
@@ -3929,15 +3929,21 @@ section {
 .top .social__link svg {
   height: 20px;
   width: 20px;
-  fill: #fff;
+  fill: currentColor;
 }
 
 .top .social__link svg path {
-  fill: #fff !important;
+  fill: currentColor !important;
 }
 
 .top .slider {
   width: 100%;
+}
+
+.top .slider__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .top .slider .slide {
@@ -3954,6 +3960,10 @@ section {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.top .slider .slide__text {
+  margin-right: auto;
 }
 
 .top .slider .slide__text >* {
@@ -7867,6 +7877,10 @@ section {
 }
 
 @media only screen and (max-width: 1279px) {
+  .category.top max-heigth 100vh {
+    max-height: none;
+  }
+
   .company-wrapper {
     width: 65%;
   }

@@ -1,7 +1,7 @@
 .top
 	min-height 100vh
 	height auto
-	background-image url('/assets/images/first.jpg')
+	background-image url('/assets/images/pattern.jpg')
 	background-size cover
 	background-position center center
 	padding 50px
@@ -55,12 +55,16 @@
 			svg
 				height 20px
 				width 20px
-				fill white
+				fill currentColor
 				path 
-					fill white!important
+					fill currentColor!important
+			
+			
 					
 	.slider
 		width 100%
+		&__list
+			display flex
 		.slide
 			text-transform uppercase
 			font-family 'HelveticaNeue'
@@ -72,6 +76,7 @@
 			+below(600px)
 				padding 10px 0
 			&__text 
+				margin-right auto
 				+below(1300px)
 					width 40%
 				+below(600px)

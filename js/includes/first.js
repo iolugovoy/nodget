@@ -6,7 +6,12 @@ app.on('init', () => {
 			items: 1,
 			start: 1
 		}, ['xs', 'sm', 'md', 'lg', 'xl', 'ml'], $acsSlider.find('.owl-arrows__prev'), $acsSlider.find('.owl-arrows__next'));
+		$acsSlider.find('.slider__list').on('changed.owl.carousel', function(event) {
+	    	$('.top__bg').removeClass('current');
+	    	$('.top__bg').eq(event.item.index).addClass('current');
+		})
 	};
+
 	let $this = $('.top__slider-wrapper');
 	if ($this.length) {
 		owlCarouselFacade($this.find('.top-slider'), {

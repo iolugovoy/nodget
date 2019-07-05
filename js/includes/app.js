@@ -110,11 +110,13 @@ let app = (function($) {
             },
             init() {
                 this.lazyLoad = new LazyLoad({
+                    elements_selector: "img, .lazyload",
                     class_loading: "lazy-loading",
                     class_loaded: "lazy-loaded",
                     class_error: "lazy-error",
                     class_initial: "lazy-initial",
-                    data_src: 'src'
+                    data_src: "src",
+                    data_bg: "bg"
                 });
                 _bindEvents();
                 this.currentScale = _getNewScale();

@@ -1,6 +1,8 @@
 .category.top
 	position relative
-	
+	max-heigth 100vh
+		+below(md)
+			max-height none
 	&:after
 		content ''
 		position absolute 
@@ -46,3 +48,4 @@
 				font-size 80px
 			+below(600px)
 				font-size 40px
+				
