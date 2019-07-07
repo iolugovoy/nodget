@@ -8,6 +8,7 @@
 			font-size 70px
 			font-weight 600
 			margin-bottom 20px
+			
 			+below(600px)
 				font-size 32px
 		h4
@@ -20,11 +21,15 @@
 			justify-content space-between
 			list-style-type none
 		.news-item
-			width 28%
+			width 100%
 			margin-bottom 50px
 			display flex 
-			align-items center
+			align-items flex-start
 			flex-direction column
+			padding-top 80px
+			padding-bottom 40px
+			margin-bottom 40px
+			border-bottom 1px solid white
 			+below(900px)
 				width 46%
 			+below(650px)
@@ -42,6 +47,10 @@
 			.title
 				font-size 30px
 				margin-top 20px
+				font-family Muller, sans-serif
+			&__description
+				font-family Muller, sans-serif
+				
 			
 	.top__share
 		position absolute
