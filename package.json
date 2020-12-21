@@ -45,7 +45,7 @@
     "imagemin-pngquant": "^6.0.0",
     "minimatch": "^3.0.4",
     "natives": "^1.1.6",
-    "node-notifier": "^5.1.2"
+    "node-notifier": "^8.0.1"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
