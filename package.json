@@ -18,7 +18,7 @@
     "graceful-fs": "^4.1.11",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-babel": "^6.1.2",
+    "gulp-babel": "^8.0.0",
     "gulp-babel-minify": "^0.5.0",
     "gulp-cheerio": "^0.6.3",
     "gulp-clean-css": "^3.10.0",
